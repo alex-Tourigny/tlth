@@ -1,0 +1,164 @@
+$dark-blue: #282d33;
+$white: white;
+$orange: #ff3300;
+$dark-orange: #dd2c00;
+$transition: 250ms ease-in-out;
+
+html, body{
+	position: relative;
+	background: $dark-blue;
+	overflow: hidden;
+}
+
+.ocean {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 5%;
+	bottom: -5%;
+	left: 0;
+	opacity: .5;
+
+	.wave {
+		background: url('../images/login/login-wave.svg') repeat-x;
+		position: absolute;
+		top: -198px;
+		width: 6400px;
+		height: 198px;
+		animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+		transform: translate3d(0, 0, 0);
+	}
+
+	.wave:nth-of-type(2) {
+		top: -175px;
+		animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+		opacity: 1;
+	}
+}
+
+#login{
+	position: relative;
+	z-index: 2;
+}
+
+.login{
+	padding: 0;
+
+	form{
+		border-radius: 4px;
+		border: 0;
+	}
+
+	h1{
+
+		a{
+			margin-bottom: 40px;
+			color: $white;
+			width: 200px;
+			height: 100px;
+			background: {
+				image: url('../images/login/login-logo.svg');
+				repeat: no-repeat;
+				position: center;
+				size: contain;
+			}
+		}
+	}
+
+	.wp-pwd{
+
+		.dashicons{
+			color: $orange;
+		}
+	}
+
+	.forgetmenot{
+		position: relative;
+		top: 4px;
+	}
+
+	#wp-submit{
+		background: $orange;
+		border-color: $orange;
+		font-weight: bold;
+		text-transform: uppercase;
+		transition: all $transition;
+
+		&:hover{
+			background: $dark-orange;
+		}
+	}
+
+	#backtoblog{
+		display: none !important;
+	}
+
+	#nav{
+		text-align: center;
+
+		a{
+			color: $white;
+			transition: all $transition;
+
+			&:hover{
+				color: $orange;
+			}
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		transition: all $transition;
+		box-shadow: none !important;
+		outline: none !important;
+
+		&:focus{
+			border-color: $orange;
+		}
+	}
+
+	input[type="checkbox"]:checked:before{
+		content: '';
+		position: relative;
+		top: 5px;
+		left: 6px;
+		width: 10px;
+		height: 10px;
+		background: {
+			image: url('../images/login/login-checkmark.svg');
+			repeat: no-repeat;
+			position: center;
+		}
+	}
+}
+
+@keyframes wave {
+	0% {
+		margin-left: 0;
+	}
+	100% {
+		margin-left: -1600px;
+	}
+}
+
+@keyframes swell {
+	0%, 100% {
+		transform: translate3d(0,-25px,0);
+	}
+	50% {
+		transform: translate3d(0,5px,0);
+	}
+}
+
+@media (max-width: 782px)
+{
+	.login {
+		input[type="checkbox"]:checked::before {
+			width: 15px;
+			height: 15px;
+			top: 7px;
+			left: 9px;
+		}
+	}
+}

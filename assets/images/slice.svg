@@ -1,0 +1,7 @@
+<svg width="0" height="0">
+    <defs>
+        <clipPath id="slice-clip" clipPathUnits="objectBoundingBox">
+            <path fill="#FFFFFF" d="M 10 80 Q 52.5 10, 95 80 T 180 80"/>
+        </clipPath>
+    </defs>
+</svg>

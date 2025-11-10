@@ -1,0 +1,107 @@
+//Colours
+$white: #FFFFFF;
+$light-grey: #C3CCD3;
+$light-purple: #E8EEFF;
+$light-green: #BAEECE;
+$light-blue: #BAECF2;
+$deep-blue: #032D40;
+$purple: #7940B1;
+$green: #5ece7c;
+$blue: #00ABC0;
+$medblue: #1D86BC;
+$light-medblue: #D4EDFA;
+$blue-grey: #768791;
+$red: #FB414D;
+$strong-red: #DE0E18;
+$yellow: #FFC048;
+$grey: #666A72;
+$black: #000000;
+
+
+/*- Couleurs de noël -*/
+
+$xmas-red:#FA404D;
+$xmas-green:#009A7E;
+
+
+
+/*- Jeu de noel -*/
+
+$dark-red: #AA1A47;
+$med-grey:#EFF2F5;
+$dark-green: #09956F;
+$game-green: #32A37C;
+$dark-grey:#404A56;
+
+//Fonts
+//@import url("https://use.typekit.net/fje3iel.css");
+
+@font-face {
+	font-family: 'Trace quebecois';
+	src: url('../fonts/Tracequebecois.ttf') format('truetype'),
+	url('../fonts/Tracequebecois.woff') format('woff'),
+	url('../fonts/Tracequebecois.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+/*- font -*/
+$font: 'Mont', sans-serif;
+$font-bold: 'Mont Bold', sans-serif;
+$font-title: 'fatfrank', sans-serif;
+$font-body: 'rubrik-edge-new', sans-serif;
+$font-book: 'Trace quebecois', sans-serif;
+
+
+/*
+ * Fonts
+ */
+@font-face {
+	font-family: 'Mont';
+	src: url('../../fw/core/login/fonts/Mont/Mont-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Mont Bold';
+	src: url('../../fw/core/login/fonts/Mont/Mont-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Mont Heavy';
+	src: url('../../fw/core/login/fonts/Mont/Mont-Heavy.woff') format('woff');
+}
+
+
+
+//Transitions:
+$transition: 200ms  ease-in-out;
+
+$font-secondary: 'Rubik', sans-serif;
+
+/*- Font sizes -*/
+
+$fz-h1-desktop: 60px;
+$fz-h1-tablet: 48px;
+$fz-h1-mobile: 36px;
+
+$fz-big-title-desktop: 40px;
+$fz-big-title-tablet: 32px;
+$fz-big-title-mobile: 28px;
+
+$fz-text-desktop: 4;
+
+/*- transition -*/
+
+$transition:all 0.3s ease-in-out;
+
+/*- margins -*/
+
+$margin-280: 280px;
+$margin-180: 180px;
+$margin-125: 125px;
+$margin-90: 90px;
+$margin-40: 40px;
+$margin-25: 25px;
+$margin-20: 20px;

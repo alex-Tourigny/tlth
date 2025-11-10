@@ -1,0 +1,263 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gfield.gform_validation_container {
+  display: none;
+}
+.gfield.gfield_error input,
+.gfield.gfield_error textarea {
+  color: darkred;
+}
+.gfield input,
+.gfield textarea {
+  border: 0;
+}
+
+.gform_confirmation_message {
+  color: darkgreen;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  margin: 0 auto;
+  display: block;
+}
+
+.alignleft {
+  float: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bold, strong, b {
+  font-weight: bold;
+}
+
+.undo-ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+.undo-li {
+  margin-bottom: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+.undo-p {
+  margin: 0;
+}
+
+/*a {
+	outline: 0;
+	text-decoration: none;
+}
+
+a:visited {
+	outline: 0;
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: 0;
+	color: inherit;
+	text-decoration: none;
+}
+
+a:active {
+	outline: 0;
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}*/
+a {
+  text-decoration: none;
+}
+
+/*a:link {
+	color: inherit;
+}
+
+a:visited {
+	color: inherit;
+}*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+.clearfix:after, .cf:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.flat-left {
+  padding-left: 0;
+}
+
+.flat-right {
+  padding-right: 0;
+}
+
+.flat-both {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.flat-top {
+  padding-top: 0;
+}
+
+.flat-bottom {
+  padding-bottom: 0;
+}
+
+.flat-vertical {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.flat-all {
+  padding: 0;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.mfp-arrow::after,
+.mfp-arrow::before {
+  display: none !important;
+}
+
+.mfp-arrow-right {
+  background: url("../fw/core/assets/images/chevron-right.svg") no-repeat center center !important;
+  background-size: 30px 30px !important;
+}
+
+.mfp-arrow-left {
+  background: url("../fw/core/assets/images/chevron-left.svg") no-repeat center center !important;
+  background-size: 30px 30px !important;
+}
+
+.r {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-columns-1 dl {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery-columns-2 dl {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery-columns-3 dl {
+  width: 33.3333333333%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery-columns-4 dl {
+  width: 25%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery-columns-5 dl {
+  width: 20%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery-columns-6 dl {
+  width: 16.6666666667%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery-columns-7 dl {
+  width: 14.2857142857%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery-columns-8 dl {
+  width: 12.5%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery-columns-9 dl {
+  width: 11.1111111111%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*# sourceMappingURL=base.css.map */

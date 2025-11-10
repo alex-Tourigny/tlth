@@ -1,0 +1,115 @@
+/*
+ * Vertically align an element without using Flexbox
+ */
+@mixin v-align($position: relative)
+{
+
+	@if($position == none){
+		position: relative;
+		top: auto;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+	} @else {
+		position: $position;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+/*
+ * Add a color overlay absolutelly positionned over something
+ */
+@mixin overlay($color)
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: $color;
+	z-index: 1;
+}
+
+/*
+ * Overwrite browser placeholders styles
+ */
+@mixin placeholder($color, $opacity: 1)
+{
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: $color;
+		opacity: $opacity;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+		color: $color;
+		opacity: $opacity;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+		color: $color;
+		opacity: $opacity;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+		color: $color;
+		opacity: $opacity;
+	}
+}
+
+/*
+ * Convert images to background
+ */
+@mixin image-bg($fit: cover)
+{
+	position: relative;
+
+	> img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: $fit;
+		object-position: center;
+	}
+}
+
+/*
+ * Responsive shapes
+ */
+@mixin responsive_shape($padding-top: 100%)
+{
+	position: relative;
+
+	&:before{
+		content: '';
+		display: block;
+		padding-top: $padding-top;
+	}
+}
+
+/*
+ * Drop shadows
+ */
+
+@mixin shadow($box-shadow)
+{
+	-webkit-box-shadow: 0px 4px 5px $box-shadow;
+	-moz-box-shadow: 0px 4px 5px $box-shadow;
+	box-shadow: 0px 4px 5px $box-shadow;
+}
+
+
+/*
+ * Remove mobile/iOS default buttons
+ */
+
+@mixin mobile_appearance($none: none){
+	-webkit-appearance: $none;
+	-moz-appearance: $none;
+	appearance: $none;
+}

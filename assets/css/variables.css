@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/*- Couleurs de noël -*/
+@font-face {
+  font-family: "Trace quebecois";
+  src: url("../fonts/Tracequebecois.ttf") format("truetype"), url("../fonts/Tracequebecois.woff") format("woff"), url("../fonts/Tracequebecois.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*# sourceMappingURL=variables.css.map */

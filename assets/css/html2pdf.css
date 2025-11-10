@@ -1,0 +1,26 @@
+@page {
+  size: 7in 8.5in;
+  margin: 1in 0.75in 0.75in 0.75in;
+}
+html, body {
+  font-family: trace, sans-serif;
+}
+
+.book-page {
+  line-height: 1.15;
+  page-break-after: always;
+}
+.book-page .page-content {
+  height: 5.4in;
+}
+.book-page .page-content.message {
+  font-size: 20px;
+  font-family: message-1, sans-serif;
+}
+.book-page .page-number {
+  margin-top: 0.5in;
+  text-align: center;
+  font-size: 22px;
+}
+
+/*# sourceMappingURL=html2pdf.css.map */

@@ -1,0 +1,278 @@
+/*
+ * Variables
+ */
+$black: #000000;
+$white: #FFFFFF;
+$blue: #444DFA;
+$transition: 250ms ease-in-out;
+
+/*
+ * Fonts
+ */
+@font-face {
+	font-family: 'Mont';
+	src:  url('fonts/Mont/Mont-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Mont Bold';
+	src: url('fonts/Mont/Mont-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Mont Book';
+	src: url('fonts/Mont/Mont-Book.woff') format('woff');
+}
+
+/*
+ * Styles
+ */
+html, body{
+	color: $black;
+	font-family: 'Mont', sans-serif;
+}
+
+body{
+	background: $black;
+}
+
+#login{
+	margin: 0;
+	padding: 0;
+}
+
+.language-switcher{
+	display:none!important;
+}
+
+.login-left{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: 480px;
+}
+
+.login-right{
+	position: fixed;
+	top: 0;
+	left: 480px;
+	width: calc(100% - 480px);
+	height: 100%;
+	background: {
+		color: black;
+		size: cover;
+		//image: url('../images/login/login-bg.jpg');
+		repeat: no-repeat;
+	}
+
+	&:before{
+		//content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100px;
+		height: 100%;
+		background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+	}
+
+	.tagline{
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		position: absolute;
+		z-index: 2;
+		bottom: 40px;
+		left: 80px;
+		pointer-events: none;
+
+		.tagline-text{
+			width: 337px;
+			height: 170px;
+		}
+
+		.tagline-arrow{
+			display: none;
+			width: 57px;
+			height: 28px;
+			transition: all $transition;
+		}
+	}
+
+	#login-slider{
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		.slick-list,
+		.slick-track{
+			height: 100%;
+		}
+
+		a{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			> img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+}
+
+.login{
+
+	h1{
+
+		a{
+			width: 210px;
+			height: 83px;
+			background: {
+				image: url('../../../assets/images/login/logo-rubik.svg');
+				size: auto;
+			}
+		}
+	}
+
+	form{
+		box-shadow: none;
+		border: 0;
+		padding: 50px 25px 25px 25px;
+
+		label{
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="checkbox"],
+		input[type="password"]{
+			border-radius: 0;
+			border-color: $black;
+		}
+
+		input[type="checkbox"]{
+			width: 20px;
+			height: 20px;
+
+			&:checked{
+				position: relative;
+
+				&:before{
+					content: '';
+					position: absolute;
+					top: 6px;
+					left: 7px;
+					width: 12px;
+					height: 12px;
+					background: {
+						image: url('../../../assets/images/login/login-checkmark.svg');
+						repeat: no-repeat;
+						position: center;
+						size: contain;
+					}
+				}
+			}
+		}
+
+
+		.forgetmenot{
+			width:100%;
+			margin-top: 6px;
+			float:none!important;
+
+			label{
+				vertical-align: middle;
+				margin-bottom: 0;
+			}
+		}
+
+		.submit{
+			width:100%;
+			margin-top: 10px!important;
+
+			input{
+				border: 0;
+				border-radius: 0;
+				background: $blue;
+				font: 16px/1em 'Mont Bold', sans-serif;
+				text-transform: uppercase;
+				width:100%;
+				transition: all $transition;
+
+				&:hover{
+					background: $black;
+				}
+			}
+		}
+	}
+
+	#backtoblog{
+		display: none;
+	}
+
+	#nav{
+		background: $white;
+		margin-top: 0;
+		padding-bottom: 25px;
+		text-align:center;
+
+		a{
+			color: $blue;
+			transition: all $transition;
+
+			&:hover{
+				color: $black;
+			}
+		}
+	}
+
+	.dashicons{
+		color: $blue;
+	}
+}
+
+
+/*
+ * Responsive
+ */
+@media (max-height: 480px)
+{
+	.login-left{
+		display: block;
+		align-items: revert;
+		min-height: auto;
+
+		#login{
+			padding: 8% 0;
+		}
+	}
+}
+
+@media (max-width: 1023px)
+{
+	.login-left{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		width: 100%;
+	}
+
+	.login-right{
+		display: none;
+	}
+}

@@ -1,0 +1,59 @@
+.admin-c2a {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.admin-c2a h2 {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  padding: 0 !important;
+  color: red;
+}
+
+.book-maker-fields pre {
+  font-weight: bold !important;
+}
+.book-maker-fields li {
+  display: flex;
+  align-items: center;
+}
+.book-maker-fields li:first-child {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.book-maker-fields li > * {
+  width: 50%;
+  padding: 10px;
+}
+
+.pdf-view-btn {
+  margin-top: 10px;
+}
+
+.admin-table {
+  display: table;
+}
+.admin-table tbody tr {
+  border: 1px solid lightgray;
+}
+.admin-table tbody tr td {
+  border: 1px solid lightgray;
+}
+
+.kant-form {
+  transition: all 200ms ease-in-out;
+}
+.kant-form.loading {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.kant-form .form-row {
+  margin: 10px 0;
+}
+
+#order_line_items .display_meta {
+  display: none;
+}
+
+/*# sourceMappingURL=admin.css.map */

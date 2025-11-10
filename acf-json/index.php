@@ -1,0 +1,2 @@
+<?php
+// Something about silence?

@@ -1,0 +1,39 @@
+{
+    "key": "group_5fb2841f7415f",
+    "title": "Product category",
+    "fields": [
+        {
+            "key": "field_5fb2df89607f8",
+            "label": "Couleur de la pastille",
+            "name": "product-cat-color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "product_cat"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1614884545
+}

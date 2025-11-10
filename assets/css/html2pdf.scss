@@ -1,0 +1,31 @@
+$font: trace;
+
+@page{
+	size: 7in 8.5in;
+	margin: 1in .75in .75in .75in;
+}
+
+html, body{
+	font-family: $font, sans-serif;
+}
+
+.book-page{
+	line-height: 1.15;
+	page-break-after: always;
+
+	.page-content{
+		height: 5.4in;
+
+		&.message{
+			font-size: 20px;
+			font-family: message-1, sans-serif;
+		}
+	}
+
+	.page-number{
+		margin-top: .5in;
+		//border: 2px solid red;
+		text-align: center;
+		font-size: 22px;
+	}
+}
