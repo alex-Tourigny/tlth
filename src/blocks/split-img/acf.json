@@ -1,0 +1,366 @@
+{
+    "key": "group_split_img",
+    "title": "Split Image Block",
+    "fields": [
+        {
+            "key": "field_about_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "aria-label": "",
+            "type": "textarea",
+            "rows": 2,
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Ton Livre Ton Histoire: bien plus que des livres!",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_about_desc",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_about_cta_link",
+            "label": "CTA Link",
+            "name": "cta_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_image",
+            "label": "Featured Image",
+            "name": "featured_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_split_img_badge",
+            "label": "Badge Image (top-left)",
+            "name": "badge_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optional badge displayed in the top-left corner of the featured image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_split_img_show_hat",
+            "label": "Show Hat Decoration",
+            "name": "show_hat",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Display the propeller hat shape over the image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_split_img_hat_top",
+            "label": "Hat Top Offset (px)",
+            "name": "hat_top",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Vertical offset from the top of the image, in pixels (negatives allowed).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_split_img_show_hat",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": -20,
+            "min": "",
+            "max": "",
+            "step": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_split_img_hat_left",
+            "label": "Hat Left Offset (%)",
+            "name": "hat_left",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Horizontal position from the left of the image, as a percentage.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_split_img_show_hat",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 35,
+            "min": -50,
+            "max": 150,
+            "step": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "%"
+        },
+        {
+            "key": "field_split_img_hat_size",
+            "label": "Hat Size (px)",
+            "name": "hat_size",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Width of the hat in pixels.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_split_img_show_hat",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 72,
+            "min": 20,
+            "max": 400,
+            "step": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_split_img_shapes",
+            "label": "Decorative Shapes",
+            "name": "shapes",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "option-1": "Zero + Triple Half",
+                "option-2": "Zero",
+                "option-3": "Half Circle + Triple Half",
+                "option-4": "Triple Half Right",
+                "option-5": "Triple Half Left",
+                "option-6": "Half Circle + Zero"
+            },
+            "default_value": "none",
+            "return_format": "value",
+            "multiple": 0,
+            "translations": "copy_once",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_6935ccf471979",
+            "label": "Image Rounded",
+            "name": "img_rounded",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "rounded-3xl": "All corners",
+                "rounded-t-full": "Top corners"
+            },
+            "default_value": "rounded-3xl",
+            "return_format": "value",
+            "multiple": 0,
+            "translations": "copy_once",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_split_img_extra_padding_top",
+            "label": "Extra padding top",
+            "name": "extra_padding_top",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Default is the standard spacing; LG adds more space above the content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "lg": "Large"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "translations": "copy_once",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_split_img_extra_padding_bottom",
+            "label": "Extra padding bottom",
+            "name": "extra_padding_bottom",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Default is the standard spacing; LG adds more space below the content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default",
+                "lg": "Large"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "translations": "copy_once",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/split-img"
+            }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-boutique"
+            }
+        ]
+    ],
+    "active": true
+}
+

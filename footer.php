@@ -1,116 +1,90 @@
 </main>
 
 <?php
-$partners = new WP_Query(
-	array(
-		'post_type' => 'partner',
-		'posts_per_page' => -1,
-		'orderby' => 'rand'
-	)
-);
+$option = get_fields('option');
+$newsletter_text = $option['newsletter_text_wysi-' . LANG];
+$newsletter_form = $option['newsletter_form'];
+?>
 
-if( $partners->have_posts() ){ ?>
-	<footer id="subfooter">
-		<div class="wrapper">
-			<div class="row align-items-center">
-				<div class="col-12 col-lg-3">
-					<h3 class="subtitle"><?= pll__("Merci à nos partenaires"); ?></h3>
-				</div>
-
-				<div class="col-12 col-lg-9">
-					<div class="row">
-
-						<? while( $partners->have_posts() ){
-							$partners->the_post(); ?>
-
-							<div class="col-6 col-lg-3">
-								<a href="<?= get_field('url'); ?>" target="_blank" class="partner-block">
-									<?= FW::featured_image(); ?>
-								</a>
-							</div>
-
-						<? } ?>
-					</div>
-				</div>
+<footer id="footer" class="relative z-50 bg-deep-blue overflow-x-clip rounded-t-4xl">
+	<div class="relative !px-8 sm:!px-12 max-w-content mx-auto py-0">
+		<div class="shapes-container absolute top-0 left-0 w-full h-full overflow-hidden">
+			<div class="shape absolute top-0 right-[230px] -rotate-90 h-[580px] w-[310px]">
+				<?= file_get_contents(THEME_PATH . '/assets/images/shapes/zero.svg'); ?>
+			</div>
+			<div class="shape absolute -top-12 -right-8 rotate-45 h-[480px] w-[330px]">
+				<?= file_get_contents(THEME_PATH . '/assets/images/shapes/half-circle.svg'); ?>
 			</div>
 		</div>
-	</footer>
-<?php } wp_reset_postdata(); ?>
-
-<footer id="footer">
-
-	<?
-	if( get_field('bg-img', 'option') ){
-		echo FW::get_image( get_field('bg-img', 'option') );
-	}
-	?>
-
-	<div class="footer-content">
-		<div class="wrapper">
-			<a href="<?= pll_home_url(); ?>">
-				<?= file_get_contents(THEME_PATH . '/assets/images/footer-circle-logo.svg'); ?>
-			</a>
-
-			<div class="footer-icons">
-				<?php include(THEME_PATH . '/includes/social-icons.php'); ?>
-			</div>
-
-			<div class="footer-buttons">
-				<?php include(THEME_PATH . '/includes/footer-buttons.php'); ?>
-			</div>
-
-			<div class="footer-primary-nav">
-				<nav>
-					<ul>
+		<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+			<div class="lg:col-span-7 xl:col-span-6 py-12 lg:py-14">
+				
+				<?php if( $newsletter_text ){ ?>
+					<div class="the-content max-w-[370px]">
+						<?= tlth_colored_text($newsletter_text, 'teal'); ?>
+					</div>
+				<?php } ?>
+				
+				<?php if( $newsletter_form ){ ?>
+					<div class="max-w-[400px]">
+						<?php gravity_form( $newsletter_form['id'], false, false, false, [], true ); ?>
+					</div>
+				<?php } ?>
+				
+				<nav class="footer-nav mb-8">
+					<ul class="flex flex-wrap gap-x-2 gap-y-4">
 						<?php
 						wp_nav_menu(
 							array(
 								'theme_location' => 'footer',
 								'container' => '',
-								'items_wrap' => '%3$s'
+								'items_wrap' => '%3$s',
+								'fallback_cb' => false
 							)
 						);
 						?>
 					</ul>
 				</nav>
-			</div>
-
-			<div class="footer-copy">
-
-				<div class="additional-links">
-
-					<?php if( have_rows('footer-links-row-' . LANG, 'option') ){ ?>
-						<nav>
-							<ul>
-								<?php while( have_rows('footer-links-row-' . LANG, 'option') ){ the_row();
-									$link = get_sub_field('link-' . LANG, 'option');
-									?>
-								<li>
-									<a href="<?= $link['url']; ?>" href="<?= $link['target']; ?>"><?= $link['title']; ?></a>
-								</li>
-								<?php } ?>
-							</ul>
-						</nav>
-					<?php } ?>
-
+				
+				<div class="footer-bottom text-muted-blue text-xs lg:text-sm">
+					<div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+						<?php if( $option['footer_copyright'] ){ ?>
+							<span><?= $option['footer_copyright']; ?></span>
+						<?php } else { ?>
+							<span>&copy; <?= date('Y'); ?>. Ton Livre Ton Histoire.</span>
+						<?php } ?>
+						
+						<?php if( have_rows('footer-links-row', 'option') ){ ?>
+							<?php while( have_rows('footer-links-row', 'option') ){ the_row();
+								$link = get_sub_field('footer-link', 'option');
+								if ($link) { ?>
+									<a href="<?= esc_url($link['url']); ?>" target="<?= esc_attr($link['target']); ?>" class="hover:text-teal transition-colors duration-200">
+										<?= esc_html($link['title']); ?>
+									</a>
+								<?php }
+							} ?>
+						<?php } ?>
+					</div>
 				</div>
-                <style>
-                    #rubik-api-copyright {
-                        justify-content: center;
-                    }
-                </style>
-				<div><?= '&copy;' . ' ' . date('Y') . ' ' . pll__('copyright'); ?></div>
-                <div class="text-center"><?//= FW::rubik_footer( LANG ); ?></div>
+				
 			</div>
+			
+			<!-- Right Content: Mascot Illustration -->
+			<div class="relative hidden lg:block lg:col-span-5 xl:col-span-6 melon-illustration h-[calc(100%+130px)] -mt-[130px] -mr-24 overflow-hidden">
+				<div class="bras absolute bottom-0 right-0">
+					<?= file_get_contents(THEME_PATH . '/assets/images/melon/melon_bras.svg'); ?>
+				</div>
+				<div class="corps absolute bottom-0 right-0">
+					<?= file_get_contents(THEME_PATH . '/assets/images/melon/melon_corps.svg'); ?>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 
-
-
-
 </footer>
-<?php  include(THEME_PATH . '/includes/newsletter-pop.php');  ?>
-<?php include(THEME_PATH . '/includes/shop-notice.php'); ?>
+
+<?php // include(THEME_PATH . '/includes/newsletter-pop.php'); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

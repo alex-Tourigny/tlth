@@ -54,7 +54,7 @@ $field_type = $is_select_field ? 'radio' : $field_type;
 		<div class="col-12 col-sm-6 order-0 order-sm-1">
 			<? if( get_field('workshop-character-img', $book_id ) ){ ?>
 				<div class="img">
-					<?= FW::get_image( get_field('workshop-character-img', $book_id ) ); ?>
+					<?= TLTH::get_image( get_field('workshop-character-img', $book_id ) ); ?>
 				</div>
 			<? } ?>
 		</div>

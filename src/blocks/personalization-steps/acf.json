@@ -1,0 +1,64 @@
+{
+    "key": "group_personalization_steps",
+    "title": "Personalization Steps Block",
+    "fields": [
+        {
+            "key": "field_pers_steps",
+            "label": "Steps",
+            "name": "steps",
+            "type": "repeater",
+            "min": 3,
+            "max": 3,
+            "layout": "block",
+            "button_label": "Ajouter une étape",
+            "sub_fields": [
+                {
+                    "key": "field_pers_step_title",
+                    "label": "Step Title",
+                    "name": "step_title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_pers_step_image",
+                    "label": "Step Illustration",
+                    "name": "step_image",
+                    "type": "image",
+                    "return_format": "id",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_pers_step_badge_color",
+                    "label": "Badge Color",
+                    "name": "badge_color",
+                    "type": "select",
+                    "choices": {
+                        "teal": "Teal",
+                        "coral": "Coral",
+                        "gold": "Gold"
+                    },
+                    "default_value": "teal",
+                    "allow_null": 0,
+                    "multiple": 0
+                }
+            ]
+        },
+        {
+            "key": "field_pers_btn_link",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "link",
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/personalization-steps"
+            }
+        ]
+    ],
+    "active": true
+}
+

@@ -1,0 +1,49 @@
+.split-img-section .shapes-container {
+    .shape-intrinsic {
+        @apply w-auto h-auto;
+
+        svg {
+            @apply block w-auto h-auto;
+        }
+    }
+
+    .shape-zero:not(.shape-intrinsic) {
+        @apply w-auto;
+
+        svg {
+            @apply h-full w-auto;
+        }
+    }
+
+    .shape-zero {
+        &.light-teal {
+            svg path {
+                @apply fill-[#C2E6E1];
+            }
+        }
+    }
+}
+
+.split-img-hat {
+    animation: split-img-hat-float 3.5s ease-in-out infinite;
+
+    svg {
+        @apply w-full h-auto block;
+    }
+}
+
+@keyframes split-img-hat-float {
+    0%,
+    100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: -3px -6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .split-img-hat {
+        animation: none;
+    }
+}

@@ -1,0 +1,11 @@
+.campaign-steps {
+    .step-badge {
+        svg {
+            @apply absolute inset-0 w-full h-full;
+
+            path{
+                @apply fill-teal;
+            }
+        }
+    }
+}

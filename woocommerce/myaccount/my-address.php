@@ -1,15 +1,6 @@
 <?php
 /**
- * My Addresses – Custom Merged Version
- *
- * This template is a merged version of the WooCommerce My Addresses template,
- * based on the updated version (v9.3.0) and incorporating legacy modifications
- * from version (v2.6.0). It displays your billing (and shipping) addresses using
- * a responsive grid layout.
- *
- * The following addresses will be used on the checkout page by default.
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/myaccount/my-address.php.
+ * My Addresses
  *
  * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
@@ -40,7 +31,7 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
 }
 ?>
 
-<p>
+<p class="text-[15px] text-muted-blue mb-6">
     <?php
     echo apply_filters(
         'woocommerce_my_account_my_address_description',
@@ -49,18 +40,15 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
     ?>
 </p>
 
-<div class="woocommerce-Addresses row addresses">
+<div class="woocommerce-Addresses grid grid-cols-1 <?php echo ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) ? 'md:grid-cols-2' : ''; ?> gap-6">
     <?php foreach ( $get_addresses as $name => $address_title ) :
         $address = wc_get_account_formatted_address( $name );
-        // Determine the column class: use two columns if both billing and shipping exist.
-        $column_class = ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) ? 'col-12 col-sm-6' : 'col-12';
         ?>
-        <div class="<?php echo esc_attr( $column_class ); ?> woocommerce-Address">
-            <header class="woocommerce-Address-title title">
-                <h3><?php echo esc_html( $address_title ); ?></h3>
-                <a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="edit">
+        <div class="woocommerce-Address bg-white rounded-2xl p-6 shadow-soft">
+            <header class="woocommerce-Address-title flex flex-col gap-2 mb-4 pb-4 border-b border-muted-blue/10">
+                <h3 class="text-lg font-medium text-deep-blue"><?php echo esc_html( $address_title ); ?></h3>
+                <a href="<?php echo esc_url( wc_get_endpoint_url( 'edit-address', $name ) ); ?>" class="btn btn-primary text-sm !px-4 !py-1.5">
                     <?php
-                    /* translators: %s: Address title */
                     printf(
                         $address ? esc_html__( 'Edit %s', 'woocommerce' ) : esc_html__( 'Add %s', 'woocommerce' ),
                         esc_html( $address_title )
@@ -68,15 +56,9 @@ if ( ! wc_ship_to_billing_address_only() && wc_shipping_enabled() ) {
                     ?>
                 </a>
             </header>
-            <address>
+            <address class="not-italic text-[15px] text-deep-blue/80 leading-relaxed">
                 <?php
-                echo $address ? wp_kses_post( $address ) : esc_html__( 'You have not set up this type of address yet.', 'woocommerce' );
-                /**
-                 * Used to output content after core address fields.
-                 *
-                 * @param string $name Address type.
-                 * @since 8.7.0
-                 */
+                echo $address ? wp_kses_post( $address ) : '<span class="text-muted-blue italic">' . esc_html__( 'You have not set up this type of address yet.', 'woocommerce' ) . '</span>';
                 do_action( 'woocommerce_my_account_after_my_address', $name );
                 ?>
             </address>

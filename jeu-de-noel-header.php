@@ -75,12 +75,12 @@ $header_img_right = get_field("header-img-right", "option");
 
 	<?php if( $header_img_left ) { ?>
 		<div class="header-img left">
-			<?= FW::get_image($header_img_left) ?>
+			<?= TLTH::get_image($header_img_left) ?>
 		</div>
 	<?php } ?>
 	<?php if( $header_img_right ) { ?>
 		<div class="header-img right">
-			<?= FW::get_image($header_img_right) ?>
+			<?= TLTH::get_image($header_img_right) ?>
 		</div>
 	<?php } ?>
 

@@ -12,7 +12,7 @@
 
 				<a href="<?= get_sub_field('prod-link');?>">
 					<? if( get_sub_field('prod-img') ) {
-						echo FW::get_image( get_sub_field('prod-img') );
+						echo TLTH::get_image( get_sub_field('prod-img') );
 					} ?>
 				</a>
 

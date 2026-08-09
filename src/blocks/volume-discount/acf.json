@@ -1,0 +1,94 @@
+{
+    "key": "group_volume_discount",
+    "title": "Volume Discount Block",
+    "fields": [
+        {
+            "key": "field_vd_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "type": "text",
+            "default_value": "Plus tu achètes de livres, plus tu économises!"
+        },
+        {
+            "key": "field_vd_description",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "default_value": "Pour remercier nos précieux lecteurs de faire partie de notre aventure, nous proposons aux CPE, milieux de garde et écoles primaires de joyeux rabais:"
+        },
+        {
+            "key": "field_vd_tiers",
+            "label": "Discount Tiers",
+            "name": "discount_tiers",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Tier",
+            "min": 1,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_vd_tier_text",
+                    "label": "Tier Text",
+                    "name": "tier_text",
+                    "type": "text",
+                    "placeholder": "De 1 à 10 livres | 20% de rabais"
+                }
+            ]
+        },
+        {
+            "key": "field_vd_cta_link",
+            "label": "CTA Link",
+            "name": "cta_link",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_vd_featured_image",
+            "label": "Featured Image",
+            "name": "featured_image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_vd_show_badge",
+            "label": "Show Discount Badge",
+            "name": "show_badge",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_vd_badge_image",
+            "label": "Badge Image (optional)",
+            "name": "badge_image",
+            "type": "image",
+            "instructions": "",
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_vd_show_badge",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/volume-discount"
+            }
+        ]
+    ],
+    "active": true
+}

@@ -7,14 +7,11 @@
 			<?php
 			$footer_disclaimer = get_field("footer-disclaimer-" . LANG, "option");
 
-			// echo FW::get_copyright();
+			// echo TLTH::get_copyright();
 
 			if( $footer_disclaimer ){ ?>
 				<p><?= $footer_disclaimer ?></p>
-			<?php }
-
-			echo FW::rubik_footer( LANG );
-			?>
+			<?php } ?>
 
 		</div>
 	</div>

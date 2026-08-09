@@ -1,0 +1,38 @@
+{
+    "key": "group_cta_banner",
+    "title": "CTA Banner Block",
+    "fields": [
+        {
+            "key": "field_cta_banner_headline",
+            "label": "Headline",
+            "name": "headline",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text.",
+            "default_value": "Recevez 7$ par livre vendu!"
+        },
+        {
+            "key": "field_cta_banner_link",
+            "label": "CTA Link",
+            "name": "cta_link",
+            "type": "link",
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/cta-banner"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/ecole.php"
+            }
+        ]
+    ],
+    "active": true
+}

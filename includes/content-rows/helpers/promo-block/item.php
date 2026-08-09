@@ -1,7 +1,7 @@
 <div class="promo-inner">
 	<?
 	if( get_sub_field('featured-img') ){
-		echo FW::get_image( get_sub_field('featured-img') );
+		echo TLTH::get_image( get_sub_field('featured-img') );
 	}
 	?>
 
@@ -20,7 +20,7 @@
 
 	<?php if( get_sub_field('btn') ){ ?>
 		<div class="btn-spacing">
-			<?php echo FW::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
+			<?php echo TLTH::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
 		</div>
 	<? } ?>
 </div>

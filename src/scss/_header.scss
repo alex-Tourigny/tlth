@@ -1,0 +1,190 @@
+/* Header Styles */
+
+#header {
+	/* Lets width interpolate between % and intrinsic keywords (e.g. w-full → w-fit) */
+	interpolate-size: allow-keywords;
+
+	@apply sticky top-0 z-50 transition-all duration-300;
+
+	#site-logo {
+		svg {
+			@apply w-32 lg:w-48 h-auto;
+		}
+
+		.logo-text {
+			transform-box: fill-box;
+			transform-origin: left center;
+			@apply opacity-100 transition-[opacity,transform,visibility] duration-300 ease-in-out;
+			transition-delay: 0s, 0s, 0s;
+		}
+	}
+
+	// Primary navigation menu
+	#primary-nav {
+		ul {
+			@apply flex items-center gap-2;
+
+			li {
+				@apply relative;
+
+				a {
+					@apply text-[#10426d] text-[15px] font-normal no-underline border border-transparent rounded-full p-2 hover:border-primary transition-colors duration-300;
+				}
+			}
+		}
+	}
+
+	.shop-page-btn {
+		overflow: visible;
+		position: relative;
+		z-index: 1;
+
+		&__icon {
+			overflow: visible;
+		}
+
+		&__book svg {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		&__emitter {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			z-index: 2;
+			width: 0;
+			height: 0;
+			overflow: visible;
+			pointer-events: none;
+			transform: translateX(-50%);
+		}
+	}
+
+	// Mobile menu toggle animation
+	#site-burger {
+		&.active {
+			.bar-1 {
+				@apply rotate-45 translate-y-2;
+			}
+
+			.bar-2 {
+				@apply opacity-0;
+			}
+
+			.bar-3 {
+				@apply -rotate-45 -translate-y-2;
+			}
+		}
+	}
+}
+
+// Particles mount on document.body — must not be nested under .shop-page-btn
+.shop-page-btn__particle {
+	position: fixed;
+	display: block;
+	left: 0;
+	top: 0;
+	width: 6px;
+	height: 6px;
+	margin: -3px 0 0 -3px;
+	border-radius: 1px;
+	pointer-events: none;
+	z-index: 99999;
+	transition: none !important;
+	transform-origin: center center;
+}
+
+// Logo text hide on scroll (all breakpoints)
+#header.shrink {
+	#site-logo .logo-text {
+		@apply opacity-0 -translate-x-3 pointer-events-none invisible;
+		transition-delay: 0s, 0s, 0.3s;
+	}
+}
+
+// Header shrink on scroll
+@media (min-width: 1024px) {
+	#header {
+		.header-content {
+			@apply transition-all duration-300 w-full;
+		}
+
+		// Height-driven sizing so height can interpolate (auto cannot)
+		#site-logo {
+			@apply transition-[margin] duration-300 ease-in-out;
+
+			svg {
+				@apply block w-auto h-[3.9rem];
+				transition: height 300ms ease-in-out;
+			}
+		}
+
+		&.shrink {
+			@apply top-2;
+
+			.header-content {
+				@apply bg-white rounded-full w-fit shadow-medium py-2.5;
+			}
+
+			#site-logo {
+				@apply -mr-36;
+
+				svg {
+					@apply h-10;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	#header {
+		&.shrink {
+			@apply bg-white/75 backdrop-blur-lg;
+		}
+
+		&.active {
+			@apply bg-white;
+
+			#shop-notice-bar {
+				display: none;
+			}
+
+			#primary-nav {
+				display: flex !important;
+				@apply fixed inset-x-0 z-[100] flex-none flex-col items-stretch justify-start gap-6 overflow-y-auto bg-white px-8 pb-8 pt-4 shadow-medium;
+				top: calc(var(--tlth-mobile-nav-top, 4.5rem) - 1px);
+				height: calc(100dvh - var(--tlth-mobile-nav-top, 4.5rem) + 1px);
+				max-height: calc(100dvh - var(--tlth-mobile-nav-top, 4.5rem) + 1px);
+
+				> ul {
+					@apply flex flex-col items-stretch gap-1 w-full;
+
+					li a {
+						@apply block py-3 text-base;
+					}
+				}
+
+				.mobile-nav-actions {
+					@apply flex flex-col gap-3 border-t border-light-grey pt-6;
+				}
+			}
+		}
+	}
+
+	body.active {
+		@apply overflow-hidden;
+	}
+
+	#main.active {
+		@apply relative;
+
+		&::before {
+			content: '';
+			@apply fixed inset-0 z-30 bg-black/30;
+			top: calc(var(--tlth-mobile-nav-top, 4.5rem) - 1px);
+		}
+	}
+}

@@ -23,11 +23,11 @@
                             <div class="step-title"><?= get_row_index(); ?></div>
                             <?
                             if( get_sub_field('img') ){
-                                echo FW::get_image( get_sub_field('img'), '', 'img' );
+                                echo TLTH::get_image( get_sub_field('img'), '', 'img' );
                             }
 
                             if( get_sub_field('bg-color') ){
-                                echo FW::get_image( get_sub_field('bg-color'), '', 'bg-blob', 'animate__pulse');
+                                echo TLTH::get_image( get_sub_field('bg-color'), '', 'bg-blob', 'animate__pulse');
                             }
                             ?>
                         </div>

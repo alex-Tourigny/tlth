@@ -87,7 +87,7 @@ $prize = weighted_random($prize_array, $prize_rarity_array);
 								the_row(); ?>
 								<div class="prize-block">
 									<div class="img-container">
-										<?= FW::get_image(get_sub_field("prize-img")) ?>
+										<?= TLTH::get_image(get_sub_field("prize-img")) ?>
 									</div>
 									<h3><?= get_sub_field("prize-title") ?></h3>
 									<p>

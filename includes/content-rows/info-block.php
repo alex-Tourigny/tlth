@@ -10,7 +10,7 @@ if($has_cols == '2') {
 
 <div class="info-block">
 
-	<? if( get_sub_field('bg-img') ){ echo FW::get_image( get_sub_field('bg-img') ); } ?>
+	<? if( get_sub_field('bg-img') ){ echo TLTH::get_image( get_sub_field('bg-img') ); } ?>
 
 	<? if( get_sub_field('overlay-color') ){ ?>
 		<div class="overlay" style="background-color: <?= get_sub_field('overlay-color'); ?>; <?= get_sub_field('overlay-opacity') ? 'opacity: ' . get_sub_field('overlay-opacity') . ';' : ''; ?>"></div>
@@ -29,7 +29,7 @@ if($has_cols == '2') {
 							<div class="info-content">
 								<div class="wrapper">
 									<div class="info-img" data-mh="ii">
-										<? if ( get_sub_field('img') ){ echo FW::get_image( get_sub_field('img'), '', 'img' ); } ?>
+										<? if ( get_sub_field('img') ){ echo TLTH::get_image( get_sub_field('img'), '', 'img' ); } ?>
 									</div>
 									<? if( get_sub_field('title') ){ ?>
 										<h2><?= get_sub_field('title'); ?></h2>
@@ -45,7 +45,7 @@ if($has_cols == '2') {
 			<? } ?>
 
 			<div class="btn-spacing" data-aos="fade-up">
-				<?php echo FW::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
+				<?php echo TLTH::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
 			</div>
 		</div>
 

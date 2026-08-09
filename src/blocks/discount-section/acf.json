@@ -1,0 +1,78 @@
+{
+    "key": "group_discount_section",
+    "title": "Discount Section Block",
+    "fields": [
+        {
+            "key": "field_disc_title",
+            "label": "Main Title",
+            "name": "main_title",
+            "type": "text",
+            "default_value": "Plus tu achètes de livres, plus tu économises!"
+        },
+        {
+            "key": "field_disc_boutique_cta",
+            "label": "Boutique CTA (grille seulement)",
+            "name": "boutique_cta",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_disc_tiers",
+            "label": "Discount Tiers",
+            "name": "discount_tiers",
+            "type": "repeater",
+            "layout": "table",
+            "button_label": "Add Tier",
+            "sub_fields": [
+                {
+                    "key": "field_disc_range",
+                    "label": "Text",
+                    "name": "book_range",
+                    "type": "textarea",
+                    "rows": 2,
+                    "placeholder": "Ex: De rabais à l'achat de 1 à 10 livres"
+                },
+                {
+                    "key": "field_disc_image",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "id",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_disc_percent",
+                    "label": "Discount Percentage",
+                    "name": "discount_percentage",
+                    "type": "text",
+                    "placeholder": "Ex: 20"
+                }
+            ]
+        },
+        {
+            "key": "field_disc_cta_link",
+            "label": "CTA Link",
+            "name": "cta_link",
+            "type": "link",
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/discount-section"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/ecole.php"
+            }
+        ]
+    ],
+    "active": true
+}
+

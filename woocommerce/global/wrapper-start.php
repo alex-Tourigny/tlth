@@ -2,33 +2,22 @@
 /**
  * Content wrappers
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/global/wrapper-start.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
  * @see         https://docs.woocommerce.com/document/template-structure/
  * @package     WooCommerce\Templates
  * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit;
 }
 
 global $product;
 $template = wc_get_theme_slug_for_templates();
 ?>
 
-<?php if( is_product() && get_field('show-product-pane') ) { ?>
-	<div id="product-pane">
-		<div class="wrapper big">
-			<a href="<? get_permalink(); ?>#personnaliser-le-livre" class="btn blue"><?= get_field('product-pane-btn'); ?></a>
-		</div>
-	</div>
+<?php if ( is_account_page() && is_user_logged_in() ) { ?>
+	<div class="wc-account-page max-w-content mx-auto px-8 py-12 lg:py-20">
+		<div class="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 lg:gap-12">
+<?php } else { ?>
+	<div class="">
 <?php } ?>
-
-<div class="wrapper big">

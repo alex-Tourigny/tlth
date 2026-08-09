@@ -1,0 +1,47 @@
+{
+    "key": "group_unique_statement",
+    "title": "Unique Statement Block",
+    "fields": [
+        {
+            "key": "field_unique_image",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_unique_main",
+            "label": "Main Text",
+            "name": "main_text",
+            "type": "text",
+            "instructions": "/* */ for text coloring",
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/unique-statement"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/a-propos.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/ecole.php"
+            }
+        ]
+    ],
+    "active": true
+}
+

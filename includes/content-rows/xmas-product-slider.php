@@ -30,16 +30,16 @@
 								</div>
 							<?php } ?>
 							<?php if( $btn ){ ?>
-								<?= FW::button($btn, ["btn", "red"]) ?>
+								<?= TLTH::button($btn, ["btn", "red"]) ?>
 							<?php } ?>
 							<?php if( $btn2 ){ ?>
-								<?= FW::button($btn2, ["btn", "red-outline"]) ?>
+								<?= TLTH::button($btn2, ["btn", "red-outline"]) ?>
 							<?php } ?>
 						</div>
 						<div class="col-12 col-lg-6 col-image">
 							<?php if( $img ){ ?>
 								<div class="image">
-									<?= FW::get_image( $img, '', 'img' ) ?>
+									<?= TLTH::get_image( $img, '', 'img' ) ?>
 								</div>
 							<?php } ?>
 						</div>

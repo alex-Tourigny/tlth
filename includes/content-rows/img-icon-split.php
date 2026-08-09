@@ -19,7 +19,7 @@ $col_count = get_sub_field('col-count');
                 <div class="icon-feature-img" data-aos="fade-up">
 					<?
 					if (get_sub_field('featured-img')) {
-						echo FW::get_image(get_sub_field('featured-img'));
+						echo TLTH::get_image(get_sub_field('featured-img'));
 					}
 					?>
                 </div>
@@ -39,7 +39,7 @@ $col_count = get_sub_field('col-count');
                             <div class="col-sm-<?= $col_count; ?>" data-aos="fade-up" data-aos-delay="<?= $i * 50; ?>">
                                 <div class="icon-block">
                                     <? if (get_sub_field('icon')) {
-                                        echo FW::get_image(get_sub_field('icon'));
+                                        echo TLTH::get_image(get_sub_field('icon'));
                                         }
                                     ?>
 

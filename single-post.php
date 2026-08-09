@@ -22,8 +22,8 @@ $blog_page_id = get_option('page_for_posts');
 
 			<div class="col-12 col-lg-9">
 				<div class="featured-block-img">
-					<?php if( FW::featured_image() ){ ?>
-						<? echo FW::featured_image(); ?>
+					<?php if( TLTH::featured_image() ){ ?>
+						<? echo TLTH::featured_image(); ?>
 					<?php } ?>
 					<div class="blog-post-info">
 						<? the_category(); ?>

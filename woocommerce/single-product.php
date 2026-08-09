@@ -27,10 +27,9 @@ get_header( 'shop' ); ?>
 		 * woocommerce_before_main_content hook.
 		 *
 		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
+		 * @hooked woocommerce_breadcrumb - 20 (removed — back link lives in product hero)
 		 */
-		add_action('woocommerce_before_main_content', 'woocommerce_template_single_title', 11);
-		add_action('woocommerce_before_main_content', 'woocommerce_back_to_shop_url', 12);
+		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 		do_action( 'woocommerce_before_main_content' );
 	?>
 

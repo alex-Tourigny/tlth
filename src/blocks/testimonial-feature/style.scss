@@ -1,0 +1,40 @@
+@import '../../scss/variables';
+
+.testimonial-feature {
+
+	.testimonial-image {
+		@apply transition-transform duration-300;
+	}
+
+	.quote-icon-bg {
+		@apply z-20 pointer-events-none;
+		img {
+			@apply w-full h-auto;
+		}
+	}
+
+	// Slick Fade transition fix
+	.slick-slide {
+		@apply outline-none;
+	}
+
+	.slick-dots {
+		@apply flex justify-center lg:justify-start flex-wrap gap-3;
+		li {
+			@apply h-auto w-auto p-0 m-0;
+			button {
+				@apply h-[10px] w-[10px] p-0 rounded-full border border-solid border-[#0F426D] bg-transparent transition-all duration-300;
+
+				&:before {
+					@apply hidden;
+				}
+			}
+			&.slick-active, &:hover {
+				button {
+					@apply bg-[#0F426D];
+				}
+			}
+		}
+	}
+}
+

@@ -15,10 +15,10 @@
 						<div class="team-member" data-mh="team-member">
 							<? if( get_sub_field('portrait') ){ ?>
 								<div class="top-img">
-									<?php echo FW::get_image( get_sub_field('portrait'), '', 'img' ); ?>
+									<?php echo TLTH::get_image( get_sub_field('portrait'), '', 'img' ); ?>
 
 									<? if( get_sub_field('bg-color') ){
-										echo FW::get_image( get_sub_field('bg-color'), '', 'bg-blob');
+										echo TLTH::get_image( get_sub_field('bg-color'), '', 'bg-blob');
 									}
 									?>
 								</div>

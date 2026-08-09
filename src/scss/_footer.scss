@@ -1,0 +1,147 @@
+main section:last-child {
+	@apply xl:pb-[150px];
+}
+
+footer {
+
+	.the-content {
+		@apply text-white;
+	}
+
+	.the-content {
+		h2,
+		h3 {
+			@apply text-[24px] font-medium leading-tight text-white mb-1;
+		}
+
+		p {
+			@apply text-[15px] font-light leading-[20px] text-white;
+		}
+	}
+
+	.melon-illustration {
+		.corps, .bras{
+			svg{
+				@apply w-[475px];
+			}
+		}
+		.bras svg{
+			transform-origin: 61% 70%;
+			transform-box: fill-box;
+			animation: arm-wave 3.6s ease-in-out infinite;
+			will-change: transform;
+		}
+	}
+
+    .shapes-container {
+        .shape {
+            svg path{
+				@apply fill-dark-blue;
+            }
+        }
+    }
+
+	.footer-bottom {
+		@apply text-[12px] leading-[16px] text-muted-blue;
+
+		a {
+			@apply text-muted-blue no-underline transition-colors duration-200;
+
+			&:hover {
+				@apply text-teal;
+			}
+		}
+	}
+
+	.gform_wrapper.gravity-theme {
+		@apply mt-4 mb-8;
+		
+		form {
+			@apply flex flex-col sm:flex-row items-stretch gap-2;
+		}
+
+		.gform_body {
+			@apply flex-1;
+		}
+
+		.gform_fields {
+			@apply flex flex-col sm:flex-row gap-2;
+		}
+
+		.gfield_label {
+			display: none;
+		}
+
+		.gfield {
+			@apply m-0;
+			width: 100%!important;
+		}
+
+		.ginput_container_email{
+			margin-top: 0!important;
+			input{
+				padding-right: 80px!important;
+			}
+		}
+
+		form .gform-body input[type="email"] {
+			@apply w-full h-[38px] px-5 text-[15px] leading-[20px];
+			@apply bg-white text-dark-blue;
+			@apply focus:outline-none;
+
+			border-radius: 100px!important;
+
+			&::placeholder {
+				color: #043158!important;
+			}
+		}
+
+		.gform_footer {
+			@apply m-0 p-0 sm:-ml-14;
+
+			.btn {
+				@apply h-full px-6 text-[15px] leading-[20px];
+				@apply bg-teal text-white border-0 rounded-full;
+				margin-bottom: 0!important;
+			}
+		}
+	}
+
+	@keyframes arm-wave {
+		0% {
+			transform: rotate(0deg);
+		}
+		12% {
+			transform: rotate(-6deg);
+		}
+		24% {
+			transform: rotate(5deg);
+		}
+		36% {
+			transform: rotate(-4deg);
+		}
+		48% {
+			transform: rotate(3deg);
+		}
+		60% {
+			transform: rotate(-2deg);
+		}
+		72% {
+			transform: rotate(1.5deg);
+		}
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.melon-illustration {
+			.bras svg{
+				animation: none;
+			}
+			.hat {
+				animation: none;
+			}
+		}
+	}
+}

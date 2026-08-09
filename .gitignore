@@ -11,11 +11,11 @@
 /wp-content/plugins/index.php
 /wp-content/themes/index.php
 /wp-includes/
-/index.php
 /license.txt
 /readme.html
 /wp-*.php
 /xmlrpc.php
+/.cursor/
 
 # Configuration
 wp-config.php
@@ -46,3 +46,12 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+# Build output
+/dist/
+
+# Environment
+.env
+
+# Dependencies
+/node_modules/

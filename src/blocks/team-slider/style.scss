@@ -1,0 +1,146 @@
+.team-slider {
+	/* Full-viewport stage (break out of `.container`): center a 100vw strip on the parent box. */
+	.team-slider-stage--fullbleed {
+		position: relative;
+		left: 50%;
+		width: 100vw;
+		max-width: 100vw;
+		transform: translateX(-50%);
+	}
+
+	.team-slider-stage {
+		position: relative;
+		padding-top: 0.5rem;
+		/* Half card (Figma 370px) + half nav — used for arrow placement */
+		--team-card-half: 185px;
+	}
+
+	/*
+	 * --team-3up-clip from JS = 3×slide width + 2×positive spaceBetween (three gutters, no overlap).
+	 */
+	.team-slider-swiper {
+		width: 100%;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: visible;
+		padding: 2.25rem 0 5rem;
+
+		@media (min-width: 768px) {
+			padding: 2.5rem 0 6rem;
+		}
+
+		@media (min-width: 1024px) {
+			padding: 2.75rem 0 7rem;
+		}
+	}
+
+	.team-slider-swiper:not(.swiper-initialized) .swiper-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	.team-slider-swiper:not(.swiper-initialized) .swiper-slide:not(:first-child) {
+		display: none;
+	}
+
+	.team-slider-swiper .swiper-wrapper {
+		align-items: flex-start;
+	}
+
+	/* Figma: slide / card track width 370px (`slidesPerView: 'auto'`). Slightly narrower on tiny viewports. */
+	.team-slider-swiper .swiper-slide {
+		width: min(370px, calc(100vw - 2rem));
+		height: auto;
+		box-sizing: border-box;
+		padding: 0 0.06rem;
+		z-index: 1;
+	}
+
+	.team-slider-swiper .swiper-slide .team-slider-card {
+		position: relative;
+		max-width: none;
+		transform-origin: center 90%;
+		opacity: var(--ts-arc-opacity, 1);
+		/* Arc + fan: translate / rotate / scale from JS (--ts-arc-*); no transition on transform (Swiper progress already interpolates). */
+		transform: translate(var(--ts-arc-tx, 0px), var(--ts-arc-ty, 0px)) rotate(var(--ts-arc-rot, 0deg))
+			scale(var(--ts-arc-scale, 1));
+		will-change: transform, opacity;
+		transition: box-shadow 0.35s ease;
+	}
+
+	.team-slider-swiper:not(.swiper-initialized) .swiper-slide .team-slider-card {
+		transform: translate(0, -0.35rem) scale(1.04);
+	}
+
+	.team-slider-swiper .swiper-slide-active .team-slider-card {
+		box-shadow:
+			0 2px 15px -3px rgba(0, 0, 0, 0.08),
+			0 18px 36px -12px rgba(16, 66, 109, 0.12);
+	}
+
+	/* Round nav: centered on each vertical edge of the active card (translateX aligns `left`). */
+	.team-slider-nav {
+		position: absolute;
+		top: 36%;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		border-radius: 9999px;
+		background-color: theme('colors.deep-blue');
+		color: #fff;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		margin: 0;
+		box-shadow: theme('boxShadow.soft');
+		transform: translateX(-50%);
+		transition:
+			background-color 0.2s ease,
+			transform 0.2s ease,
+			opacity 0.2s ease;
+
+		&:hover:not(.swiper-button-disabled) {
+			background-color: theme('colors.dark-blue');
+			transform: translateX(-50%) scale(1.06);
+		}
+
+		&.swiper-button-disabled {
+			opacity: 0.35;
+			cursor: not-allowed;
+		}
+
+		&:focus-visible {
+			outline: 2px solid theme('colors.teal');
+			outline-offset: 2px;
+		}
+
+		svg {
+			display: block;
+		}
+	}
+
+	/* Nav centered on vertical edges of 370px active card (translateX(-50%) on button). */
+	.team-slider-nav--prev {
+		left: calc(50% - var(--team-card-half) - 2px);
+	}
+
+	.team-slider-nav--next {
+		left: calc(50% + var(--team-card-half) + 2px);
+	}
+
+	@media (max-width: 639px) {
+		.team-slider-stage {
+			--team-card-half: min(185px, calc((100vw - 2rem) / 2));
+		}
+
+		.team-slider-nav {
+			width: 2.4rem;
+			height: 2.4rem;
+			top: 35%;
+		}
+	}
+}

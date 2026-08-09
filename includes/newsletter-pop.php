@@ -16,7 +16,7 @@ $newsletter_form_id = $form_id;
 	<a href="<?= $link_type == "popup" ? "javascript:;" : $form_page_link['url'] ?>" class="newsletter-pop" <?= $link_type == 'popup' ? 'data-fancybox data-src="#newsletter-form"' : null ?>>
 		<?
 		if( get_field('news-img-' . LANG, 'option') ){
-			echo FW::get_image( get_field('news-img-' . LANG, 'option') );
+			echo TLTH::get_image( get_field('news-img-' . LANG, 'option') );
 		}
 		?>
 	</a>
@@ -26,7 +26,7 @@ $newsletter_form_id = $form_id;
 			<div class="news-img">
 				<?
 				if( get_field('form-inner-img-' . LANG, 'option') ){
-					echo FW::get_image( get_field('form-inner-img-' . LANG, 'option') );
+					echo TLTH::get_image( get_field('form-inner-img-' . LANG, 'option') );
 				}
 				?>
 			</div>

@@ -1,0 +1,396 @@
+/* Component Styles */
+
+/* Button component styles */
+@layer components {
+    .btn {
+        @apply flex gap-3 w-fit items-center justify-center text-center px-6 pt-1.5 pb-2 rounded-3xl text-[15px] font-semibold transition-colors duration-200 border no-underline;
+    }
+
+    .btn-primary {
+		@apply inline-flex items-center gap-2 bg-transparent border-primary;
+        @apply lg:hover:bg-primary lg:text-primary lg:hover:text-white;
+		@apply px-7 py-[7px] rounded-full;
+		@apply transition-all duration-300;
+	}
+
+    .btn-secondary {
+        @apply bg-deep-blue border-deep-blue text-white px-6 py-2 rounded-full transition-colors duration-300;
+        @apply lg:hover:bg-teal lg:hover:border-teal;
+    }
+
+    .btn-lg {
+        @apply px-6 py-3 text-lg;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-sm;
+    }
+
+    .btn-full {
+        @apply w-full;
+    }
+
+    .btn-form {
+        @apply bg-primary text-white border-primary;
+    }
+
+    .btn.btn-ghost-white {
+        @apply inline-flex items-center gap-2 bg-transparent border-white;
+        @apply px-7 py-[7px] rounded-full;
+        @apply transition-all duration-300;
+
+        color: white!important;
+        @apply lg:hover:!bg-white lg:hover:!text-teal;
+    }
+}
+
+/* Footer Styles */
+#footer {
+    .footer-nav ul {
+        @apply list-none m-0 p-0 text-[15px] leading-[20px] -ml-3;
+        
+        li {
+            @apply inline-block;
+            
+            a{
+				@apply text-white border border-transparent rounded-full p-3 hover:border-teal hover:text-white transition-colors duration-200;
+			}
+        }
+    }
+    
+    .footer-newsletter-form {
+        .gform_wrapper {
+            @apply m-0;
+            
+            .gform_body {
+                .gfield {
+                    @apply mb-0;
+                }
+                
+                input[type="email"],
+                input[type="text"] {
+                    @apply flex-1 px-4 py-3 rounded-lg bg-white text-dark-blue placeholder:text-muted-blue;
+                    @apply focus:outline-none focus:ring-2 focus:ring-teal transition-all duration-200;
+                }
+            }
+            
+            .gform_footer {
+                @apply m-0 p-0;
+                
+                input[type="submit"] {
+                    @apply px-6 py-3 bg-teal text-white rounded-lg font-medium;
+                    @apply hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap cursor-pointer;
+                }
+            }
+            
+            .gform_fields {
+                @apply flex flex-col sm:flex-row gap-3;
+            }
+        }
+    }
+}
+
+/* Notice Banner Styles */
+#shop-notice-bar {
+    max-height: 12rem;
+    transition: max-height 0.35s ease, opacity 0.25s ease, padding-top 0.35s ease, padding-bottom 0.35s ease;
+
+    &.is-hidden {
+        max-height: 0;
+        opacity: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+}
+
+.notice-slider,
+.notice-single {
+    @apply w-full py-2.5 px-4;
+    
+    .notice-boutique {
+        @apply block w-full text-center no-underline transition-opacity duration-300 bg-transparent;
+        
+        .notice-content {
+            @apply max-w-screen-xl mx-auto;
+            
+            .the-content {
+                @apply text-base leading-normal;
+                
+                strong {
+                    @apply font-bold;
+                }
+            }
+        }
+        
+        &:hover {
+            @apply opacity-90;
+        }
+    }
+}
+
+/* Hide all slides except first one before Slick initializes */
+.notice-slider {
+    .notice-boutique {
+        @apply hidden;
+        
+        &:first-child {
+            @apply block;
+        }
+    }
+    
+    /* After Slick initializes, it will handle visibility */
+    &.slick-initialized {
+        .notice-boutique {
+            @apply block;
+        }
+    }
+}
+
+.notice-single {
+    .notice-boutique {
+        @apply cursor-default;
+        
+        &:hover {
+            @apply opacity-100;
+        }
+    }
+}
+
+
+/* Shapes */
+@keyframes tlth-zero-appear {
+    from {
+        opacity: 0;
+        translate: var(--tlth-zero-from-x, 0) var(--tlth-zero-from-y, 0);
+    }
+    to {
+        opacity: var(--tlth-final-opacity, 0.5);
+        translate: 0 0;
+    }
+}
+
+.shapes-container {
+    @apply absolute left-0 top-0 w-full h-full;
+
+    .shape {
+        @apply absolute bg-contain bg-no-repeat;
+        svg{
+            @apply w-full h-full;
+        }
+    }
+
+    .shape-hat:not(:has(svg)) {
+        background-image: url('../../assets/images/shapes/hat.svg');
+    }
+
+    .shape-half-circle{
+        &:not(:has(svg)) {
+            background-image: url('../../assets/images/shapes/half-circle.svg');
+        }
+        
+    }
+
+    .shape-triple-half, .shape-half-circle, .shape-zero{
+        &.yellow svg path{
+            @apply fill-yellow;
+        }
+        &.coral svg path, &.red svg path{
+            @apply fill-coral;
+        }
+        &.blue svg path, &.light-blue svg path{
+            @apply fill-light-blue;
+        }
+        &.teal svg path{
+            @apply fill-teal;
+        }
+    }
+
+    &.body-shapes{
+        // Slide-in animation for header SVG shapes (the three `.shape-zero` divs).
+        // We animate via the `translate` property so we don't override Tailwind's rotation (which uses `transform`).
+
+        .shape{
+            --tlth-final-opacity: 0.5;
+            opacity: 0;
+
+            // Start hidden/outside and animate in once on page load.
+            translate: var(--tlth-zero-from-x, 0) var(--tlth-zero-from-y, 0);
+            animation-name: tlth-zero-appear;
+            animation-duration: 1500ms;
+            animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+            animation-fill-mode: both;
+            animation-delay: var(--tlth-zero-delay, 0ms);
+
+            path{
+                fill: #FFEEDB;
+            }
+            &:nth-child(1){
+                @apply -left-[60%] -top-[15vh] w-[450px] h-[450px];
+                @apply xs:-left-[40%];
+                @apply md:-left-[30%] md:w-[600px] md:h-[600px];
+                @apply xl:-left-[25%] xl:w-[750px] xl:h-[750px];
+                @apply 2xl:-left-[18%] 2xl:w-[1000px] 2xl:h-[1000px];
+                --tlth-zero-from-x: -140vw; // from top-left
+                --tlth-zero-from-y: -60vh;
+                --tlth-zero-delay: 0ms;
+            }
+            &:nth-child(2){
+                @apply left-[75%] top-[50vh] w-[500px] h-[500px] -rotate-90;
+                @apply xl:w-[650px] xl:h-[650px];
+                @apply 2xl:w-[750px] 2xl:h-[750px];
+                --tlth-zero-from-x: 140vw; // from right side
+                --tlth-zero-from-y: 0vh;
+                --tlth-zero-delay: 140ms;
+            }
+            &:nth-child(3){
+                @apply -left-[45%] top-[160vh] w-[450px] h-[450px] -rotate-[75deg];
+                @apply md:-left-[40%] md:w-[600px] md:h-[600px];
+                @apply xl:-left-[30%] xl:w-[750px] xl:h-[750px];
+                @apply 2xl:-left-[20%] 2xl:w-[1000px] 2xl:h-[1000px];
+                --tlth-zero-from-x: -140vw; // from left
+                --tlth-zero-from-y: 0vh;
+                --tlth-zero-delay: 280ms;
+            }
+        }
+        &.switched .shape{
+            &:nth-child(1){
+                @apply -right-[50%] ;
+                @apply xs:-right-[40%];
+                @apply md:-right-[30%];
+                @apply xl:-right-[25%] xl:-top-[15vh];
+                @apply 2xl:-right-[18%] 2xl:-top-[50vh];
+                --tlth-zero-from-x: 140vw; // reversed: top-right
+                --tlth-zero-from-y: -60vh;
+
+                left: auto!important;
+            }
+            &:nth-child(2){
+                @apply -left-[60%] top-[50vh] rotate-180;
+                @apply sm:-right-[50%];
+                @apply md:-right-[30%];
+                @apply xl:-left-[18%];
+                --tlth-zero-from-x: -140vw; // reversed: from left side
+                --tlth-zero-from-y: 0vh;
+            }
+            &:nth-child(3){
+                @apply -right-[60%] top-[160vh] -rotate-[75deg];
+                @apply md:-right-[40%];
+                @apply xl:-right-[20%]; 
+                @apply 2xl:top-[110vh];
+                --tlth-zero-from-x: 140vw; // reversed: from right
+                --tlth-zero-from-y: 0vh;
+
+                left: auto!important;
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .shapes-container.body-shapes .shape{
+        animation: none !important;
+        opacity: 0.5;
+        translate: 0 0;
+    }
+}
+
+/* Step Badge */
+.step-badge {
+    svg {
+        @apply absolute top-0 left-0 w-full h-full;
+    }
+    span{
+        @apply relative z-[2];
+    }
+
+	&.primary {
+        svg path{
+            @apply fill-primary;
+        }
+	}
+
+	&.deep-blue {
+        svg path{
+            @apply fill-deep-blue;
+        }
+	}
+
+	&.light-blue {
+        svg path{
+            @apply fill-light-blue;
+        }
+	}
+
+	&.teal {
+        svg path{
+            @apply fill-teal;
+        }
+	}
+
+	&.rose {
+        svg path{
+            @apply fill-rose;
+        }
+	}
+
+	&.red {
+        svg path{
+            @apply fill-red;
+        }
+	}
+
+    &.gold {
+        svg path{
+            @apply fill-gold;
+        }
+    }
+}
+
+/* Discount Image Badge */
+.discount-img-badge {
+    svg {
+        @apply w-full h-auto block;
+    }
+
+    .rotate {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: discount-img-badge-rotate 30s linear infinite;
+    }
+}
+
+@keyframes discount-img-badge-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .discount-img-badge .rotate {
+        animation: none;
+    }
+}
+
+/* Pagination Dots */
+.pagination-dots .slick-dots{
+	@apply flex justify-center flex-wrap gap-0;
+    li{
+        @apply h-auto w-auto p-1 m-0;
+    }
+	button{
+		@apply w-2.5 h-2.5 p-0 rounded-full border border-solid border-primary bg-transparent transition-all duration-300;
+		&:before{
+			@apply hidden;
+		}
+	}
+	.slick-active{
+		button{
+			@apply bg-primary;
+		}
+	}
+}

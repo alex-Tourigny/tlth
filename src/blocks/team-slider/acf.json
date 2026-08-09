@@ -1,0 +1,83 @@
+{
+    "key": "group_team_slider",
+    "title": "Team Slider Block",
+    "fields": [
+        {
+            "key": "field_ts_section_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "type": "text",
+            "default_value": "Rencontre notre équipe dévouée au /*coeur d'enfant*/",
+            "instructions": "Wrap accent words with /* */ for teal styling (same as other blocks)."
+        },
+        {
+            "key": "field_ts_members",
+            "label": "Team Members",
+            "name": "members",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Member",
+            "min": 1,
+            "sub_fields": [
+                {
+                    "key": "field_ts_photo",
+                    "label": "Photo",
+                    "name": "photo",
+                    "type": "image",
+                    "return_format": "id",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_ts_name",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_ts_role",
+                    "label": "Title / Role",
+                    "name": "role",
+                    "type": "text"
+                },
+                {
+                    "key": "field_ts_accent",
+                    "label": "Accent Color",
+                    "name": "accent_color",
+                    "type": "select",
+                    "choices": {
+                        "blue": "Blue (border + role)",
+                        "yellow": "Yellow (border + role)",
+                        "coral": "Coral (border + role)"
+                    },
+                    "default_value": "yellow",
+                    "return_format": "value",
+                    "allow_null": 0
+                }
+            ]
+        },
+        {
+            "key": "field_ts_cta",
+            "label": "Bottom Button",
+            "name": "cta_link",
+            "type": "link",
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/team-slider"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/a-propos.php"
+            }
+        ]
+    ],
+    "active": true
+}

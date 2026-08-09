@@ -1,0 +1,40 @@
+{
+    "key": "group_faq_accordion",
+    "title": "FAQ Accordion Block",
+    "fields": [
+        {
+            "key": "field_faq_acc_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "type": "text",
+            "default_value": "Foire aux questions"
+        },
+        {
+            "key": "field_faq_acc_categories",
+            "label": "Filter by Categories",
+            "name": "faq_categories",
+            "type": "taxonomy",
+            "taxonomy": "faq-category",
+            "field_type": "multi_select",
+            "return_format": "id",
+            "instructions": "Leave empty to show all categories."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/faq-accordion"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/a-propos.php"
+            }
+        ]
+    ],
+    "active": true
+}

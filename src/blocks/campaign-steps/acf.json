@@ -1,0 +1,80 @@
+{
+    "key": "group_campaign_steps",
+    "title": "Campaign Steps Block",
+    "fields": [
+        {
+            "key": "field_cs_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "type": "text",
+            "default_value": "Organisez votre campagne de financement en /*6 étapes faciles*/"
+        },
+        {
+            "key": "field_cs_description",
+            "label": "Intro Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "default_value": "",
+            "placeholder": "Enter your description here..."
+        },
+        {
+            "key": "field_cs_cta_link",
+            "label": "CTA Link",
+            "name": "cta_link",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_cs_steps",
+            "label": "Steps",
+            "name": "steps",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Step",
+            "sub_fields": [
+                {
+                    "key": "field_cs_step_title",
+                    "label": "Step Title",
+                    "name": "step_title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_cs_step_desc",
+                    "label": "Step Description",
+                    "name": "step_description",
+                    "type": "textarea",
+                    "rows": 3
+                },
+                {
+                    "key": "field_cs_step_image",
+                    "label": "Step Image",
+                    "name": "step_image",
+                    "type": "image",
+                    "return_format": "id",
+                    "preview_size": "thumbnail"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/campaign-steps"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/ecole.php"
+            }
+        ]
+    ],
+    "active": true
+}

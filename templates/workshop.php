@@ -3,7 +3,7 @@
  * Template Name: L'Atelier
  */
 $step = isset($_GET['step']) && ! empty($_GET['step']) ? $_GET['step'] : 1;
-$workshop_url = get_permalink( FW::get_page_id_by_template('templates/workshop') );
+$workshop_url = get_permalink( TLTH::get_page_id_by_template('templates/workshop') );
 
 $book_has_been_created = isset($_POST['book_complete']) && $_POST['book_complete'] == 'true' ? true : false;
 if( $book_has_been_created ){

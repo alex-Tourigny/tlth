@@ -1,0 +1,38 @@
+.split-form-section {
+    .split-form-contact-item {
+        p {
+            @apply text-base sm:text-lg leading-tight;
+        }
+    }
+
+    .split-form-icon {
+        @apply flex items-center justify-center;
+
+        svg {
+            @apply w-full h-full;
+        }
+    }
+}
+
+.split-form-form-wrapper {
+    .gform_wrapper.gravity-theme {
+        .ginput_complex {
+            @apply grid-cols-1 sm:grid-cols-2;
+        }
+    }
+}
+
+@media (max-width: 639px) {
+    .split-form-form-wrapper {
+        .gform_wrapper.gravity-theme {
+            form .gform-body input[type="text"],
+            form .gform-body input[type="email"],
+            form .gform-body input[type="tel"],
+            form .gform-body input[type="number"],
+            form .gform-body textarea,
+            form .gform-body select {
+                @apply text-base;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <div class="contact-block">
 
 		<? if( get_sub_field('bg-img') ){
-			echo FW::get_image( get_sub_field('bg-img') );
+			echo TLTH::get_image( get_sub_field('bg-img') );
 		} ?>
 
 	<div class="contact-content">
@@ -9,7 +9,7 @@
 			<div class="col-md-4">
 				<div class="contact-img">
 					<?php if( get_sub_field('img')){
-						echo FW::get_image( get_sub_field('img') );
+						echo TLTH::get_image( get_sub_field('img') );
 					} ?>
 				</div>
 			</div>
@@ -22,7 +22,7 @@
 						<div class="the-content"><?= get_sub_field('address'); ?></div>
 					<? } ?>
 					<? if( get_sub_field('tel') ){ ?>
-						<a class="tel" href="tel:<?= FW::sanitize_phone_number(get_sub_field('tel') ); ?>"><?= get_sub_field('tel');?></a>
+						<a class="tel" href="tel:<?= TLTH::sanitize_phone_number(get_sub_field('tel') ); ?>"><?= get_sub_field('tel');?></a>
 					<? } ?>
 				</div>
 			</div>

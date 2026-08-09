@@ -7,14 +7,14 @@
 			?>
 			<div class="c2a-sidebar">
 				<? if( get_sub_field('img') ){
-					echo FW::get_image( get_sub_field('img'), (''), ('')  );
+					echo TLTH::get_image( get_sub_field('img'), (''), ('')  );
 				} ?>
 				<? if( get_sub_field('question') ){ ?>
 					<h4><?= get_sub_field('question'); ?></h4>
 				<? } ?>
 				<? if( get_sub_field('btn') ){ ?>
 					<div class="btn-spacing">
-						<?php echo FW::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
+						<?php echo TLTH::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
 					</div>
 				<? } ?>
 			</div>

@@ -11,7 +11,7 @@ if( get_sub_field('img-side') == 'right' ){
 <div class="c2a-section">
 
 	<? if( get_sub_field('background-img') ){
-		echo FW::get_image( get_sub_field('background-img') );
+		echo TLTH::get_image( get_sub_field('background-img') );
 	} ?>
 
     <? if( get_sub_field('overlay-color') ){ ?>
@@ -23,7 +23,7 @@ if( get_sub_field('img-side') == 'right' ){
             <div class="col-12 col-lg-6 <?= $class_1; ?>">
                 <div data-aos="fade-up">
 					<? if( get_sub_field('featured-img') ){
-						echo FW::get_image( get_sub_field('featured-img') );
+						echo TLTH::get_image( get_sub_field('featured-img') );
 					} ?>
                 </div>
             </div>
@@ -32,7 +32,7 @@ if( get_sub_field('img-side') == 'right' ){
                 <div class="c2a-content">
 					<div data-aos="fade-up">
 						<? if( get_sub_field('content-img') ){
-							echo FW::get_image( get_sub_field('content-img'), (''), ('c2a-content-img')  );
+							echo TLTH::get_image( get_sub_field('content-img'), (''), ('c2a-content-img')  );
 						} ?>
                     </div>
 
@@ -47,7 +47,7 @@ if( get_sub_field('img-side') == 'right' ){
                     <div class="the-content" data-aos="fade-up" data-aos-delay="150" style="color: <?=get_sub_field('content-color'); ?>"><?= get_sub_field('content'); ?></div>
 
                     <div class="btn-spacing" data-aos="fade-up" data-aos-delay="200">
-						<?php echo FW::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
+						<?php echo TLTH::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
                     </div>
 
                 </div>

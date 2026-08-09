@@ -1,5 +1,5 @@
 <?php
-$review_data = get_review_data();
+$review_data = TLTH::get_review_data();
 
 $score = $review_data->result->rating;
 $total = $review_data->result->user_ratings_total;

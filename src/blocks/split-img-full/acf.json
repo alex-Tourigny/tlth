@@ -1,0 +1,62 @@
+{
+    "key": "group_split_img_full",
+    "title": "Split Img Full Block",
+    "fields": [
+        {
+            "key": "field_mh_title",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize words. Example: donner la piqûre de la /*lecture*/",
+            "required": 0,
+            "default_value": "notre mission: donner la piqûre de la /*lecture*/"
+        },
+        {
+            "key": "field_mh_button_link",
+            "label": "Button Link",
+            "name": "button_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "return_format": "array"
+        },
+        {
+            "key": "field_mh_main_image",
+            "label": "Main Image",
+            "name": "main_image",
+            "type": "image",
+            "instructions": "Kid/book image",
+            "required": 0,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png,webp"
+        },
+        {
+            "key": "field_mh_show_magic",
+            "label": "Show Magic Overlay",
+            "name": "show_magic",
+            "type": "true_false",
+            "instructions": "Enable floating stars/sparkles around the book.",
+            "required": 0,
+            "default_value": 1,
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/split-img-full"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "description": "Split image full block with optional magic overlay"
+}

@@ -1,0 +1,49 @@
+{
+    "key": "group_features_grid",
+    "title": "Features Grid Block",
+    "fields": [
+        {
+            "key": "field_features_list",
+            "label": "Features",
+            "name": "features",
+            "type": "repeater",
+            "layout": "row",
+            "button_label": "Add Feature",
+            "sub_fields": [
+                {
+                    "key": "field_feature_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "return_format": "id",
+                    "preview_size": "thumbnail"
+                },
+                {
+                    "key": "field_feature_desc",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/features-grid"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/a-propos.php"
+            }
+        ]
+    ],
+    "active": true
+}
+

@@ -1,0 +1,17 @@
+.faq-accordion {
+    .faq-item {
+        &.is-open {
+            .faq-question {
+                @apply text-teal;
+            }
+
+            .faq-icon {
+                transform: rotate(180deg);
+            }
+
+            .faq-answer {
+                max-height: 1500px;
+            }
+        }
+    }
+}

@@ -1,14 +1,14 @@
 <?php
-$book_url = add_query_arg(['step' => 3, 'book' => get_the_ID()], $workshop_url);
-$images = get_field('preview-gallery');
+$book_url   = add_query_arg(['step' => 3, 'book' => get_the_ID()], $workshop_url);
+$image_urls = tlth_get_product_flipbook_image_urls( get_the_ID() );
 ?>
 
 <div class="col-12 col-sm-6 col-lg-4">
 	<div class="book-block" data-id="<?= get_the_ID(); ?>">
-		<? if( FW::featured_image() ){ ?>
+		<? if( TLTH::featured_image() ){ ?>
 			<div class="top">
 				<a href="<?= $book_url; ?>">
-					<?= FW::featured_image(); ?>
+					<?= TLTH::featured_image(); ?>
 				</a>
 			</div>
 		<? } ?>
@@ -33,22 +33,9 @@ $images = get_field('preview-gallery');
 			</div>
 		</div>
 
-		<?php if( ! empty($images) ){ ?>
+		<?php if ( ! empty( $image_urls ) ) { ?>
 			<div class="flipbook" id="flipbook-<?= get_the_ID(); ?>">
-				<div class="flipbook-inner">
-					<?
-					$total_pages = count($images);
-
-					$i = 1;
-					foreach($images as $image){
-						$is_hard = $i == 1 || $i == 2 || $i == $total_pages - 1 || $i == $total_pages ? true : false; ?>
-
-						<div <? if($is_hard){ ?>class="hard"<? } ?>>
-							<?= FW::get_image($image); ?>
-						</div>
-
-						<? $i++; } ?>
-				</div>
+				<?= tlth_render_flipbook_inner( $image_urls ); ?>
 			</div>
 		<?php } ?>
 

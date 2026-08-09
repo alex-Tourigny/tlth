@@ -1,7 +1,7 @@
 <li>
 	<a class="recents-block-img" href="<?= get_permalink(); ?>">
-		<?php if( FW::featured_image() ){ ?>
-			<? echo FW::featured_image(); ?>
+		<?php if( TLTH::featured_image() ){ ?>
+			<? echo TLTH::featured_image(); ?>
 		<?php } ?>
 	</a>
 	<div class="recents-content">

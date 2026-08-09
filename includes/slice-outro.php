@@ -24,7 +24,7 @@ $classes[] = 'padding-' . get_sub_field('padding');
 
                     <?php
                     if (get_sub_field('btn')) {
-                        echo FW::button(get_sub_field('btn'), ['btn', 'red']);
+                        echo TLTH::button(get_sub_field('btn'), ['btn', 'red']);
                     }
                      ?>
                 <? } ?>

@@ -1,0 +1,103 @@
+/* Utility Classes */
+
+/* Scroll Animations */
+@layer utilities {
+    /* Base animation state - start hidden until scrolled into view */
+    [data-animate] {
+        @apply opacity-0;
+        /* Use `translate` (not transform translate) so rotate/scale on the same element stay intact */
+        transition: opacity 0.8s ease-in-out, translate 0.8s ease-in-out;
+    }
+
+    [data-animate].animate-in {
+        @apply opacity-100;
+    }
+
+    /* Base animation ready state - elements start hidden */
+    .animate-ready {
+        @apply opacity-0;
+        transition: opacity 0.8s ease-in-out, translate 0.8s ease-in-out;
+    }
+
+    /* When element comes into view */
+    .animate-ready.animate-in {
+        @apply opacity-100;
+    }
+
+    /* Fade in from bottom */
+    [data-animate="fade-up"] {
+        translate: 0 2rem;
+    }
+    [data-animate="fade-up"].animate-in {
+        translate: 0 0;
+    }
+
+    /* Fade in from top */
+    [data-animate="fade-down"] {
+        translate: 0 -2rem;
+    }
+    [data-animate="fade-down"].animate-in {
+        translate: 0 0;
+    }
+
+    /* Fade in from left */
+    [data-animate="fade-left"] {
+        translate: -2rem 0;
+    }
+    [data-animate="fade-left"].animate-in {
+        translate: 0 0;
+    }
+
+    /* Fade in from right */
+    [data-animate="fade-right"] {
+        translate: 2rem 0;
+    }
+    [data-animate="fade-right"].animate-in {
+        translate: 0 0;
+    }
+
+    /* Fade in only (no movement) */
+    [data-animate="fade"] {
+        @apply opacity-0;
+    }
+    [data-animate="fade"].animate-in {
+        @apply opacity-100;
+    }
+
+    /* Scale in */
+    [data-animate="scale"] {
+        @apply scale-95;
+    }
+    [data-animate="scale"].animate-in {
+        @apply scale-100;
+    }
+
+    /* Legacy class support */
+    .fade-in-up.animate-ready {
+        translate: 0 2rem;
+    }
+    .fade-in-up.animate-in {
+        translate: 0 0;
+    }
+
+    .fade-in.animate-ready,
+    .fade-in-left.animate-ready,
+    .fade-in-right.animate-ready {
+        @apply opacity-0;
+    }
+
+    .fade-in-left.animate-ready {
+        translate: -2rem 0;
+    }
+    .fade-in-left.animate-in {
+        translate: 0 0;
+    }
+
+    .fade-in-right.animate-ready {
+        translate: 2rem 0;
+    }
+    .fade-in-right.animate-in {
+        translate: 0 0;
+    }
+}
+

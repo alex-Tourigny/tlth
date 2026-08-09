@@ -1,0 +1,66 @@
+.hero-homepage {
+
+	// Hero image wrapper with blob background
+	.hero-image-wrapper {
+		@apply relative;
+
+		.hero-image {
+			@apply rounded-full w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-cover relative z-10;
+			@apply transition-transform duration-300;
+
+			&:hover {
+				@apply scale-105;
+			}
+		}
+	}
+
+	.shape-hat {
+        @apply left-[40%] -top-3 w-[55px] h-[55px];
+        @apply md:left-[42%] md:top-10 md:w-[60px] md:h-[60px];
+		@apply lg:left-[44%] lg:top-0 lg:w-[70px] lg:h-[70px];
+		animation: hero-hat-float 3.5s ease-in-out infinite;
+
+		@media (max-width: 400px) {
+			@apply left-[35%] top-4 w-[50px] h-[50px];
+		}
+    }
+
+    .shape-half-circle {
+        @apply -left-[6%] top-[12%] w-[80px] h-[80px];
+        @apply md:-left-[3%] md:top-[10%] md:w-[100px] md:h-[100px];
+        @apply lg:left-[1%] lg:top-[5%] lg:w-[131px] lg:h-[121px];
+
+		@media (max-width: 400px) {
+			@apply top-[30%] -left-[15%];
+		}
+    }
+
+    .shape-circle {
+		@apply bg-yellow rounded-full;
+		@apply right-[4%] top-[1%] w-[32px] h-[32px];
+        @apply lg:right-[9%] lg:-top-[3%] lg:w-[52px] lg:h-[52px];
+    }
+
+    .shape-zero {
+		@apply -right-[8%] top-[7%] w-[60px] h-[60px];
+		@apply md:w-[95px] md:h-[95px];
+        @apply lg:-right-[1%] lg:top-[7%] lg:w-[145px] lg:h-[145px];
+    }
+}
+
+@keyframes hero-hat-float {
+	0%,
+	100% {
+		translate: 0 0;
+	}
+	50% {
+		translate: -3px -6px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-homepage .shape-hat {
+		animation: none;
+	}
+}
+

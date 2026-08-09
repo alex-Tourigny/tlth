@@ -3,7 +3,7 @@
 		<div class="col-12 col-sm-6">
 			<? if( get_field('workshop-character-2-img', $book_id ) ){ ?>
 				<div class="img text-right">
-					<?= FW::get_image( get_field('workshop-character-2-img', $book_id ) ); ?>
+					<?= TLTH::get_image( get_field('workshop-character-2-img', $book_id ) ); ?>
 				</div>
 			<? } ?>
 		</div>

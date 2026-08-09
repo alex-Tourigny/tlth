@@ -1,0 +1,62 @@
+{
+    "key": "group_testimonial_feature",
+    "title": "Testimonial Feature Block",
+    "fields": [
+        {
+            "key": "field_test_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "type": "text",
+            "default_value": "Merci à nos chers lecteurs"
+        },
+        {
+            "key": "field_test_quote_icon",
+            "label": "Quote Icon (Optional)",
+            "name": "quote_icon",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_testimonials",
+            "label": "Testimonials",
+            "name": "testimonials",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Ajouter un témoignage",
+            "sub_fields": [
+                {
+                    "key": "field_test_text",
+                    "label": "Testimonial Text",
+                    "name": "testimonial_text",
+                    "type": "textarea",
+                    "rows": 5
+                },
+                {
+                    "key": "field_test_author",
+                    "label": "Testimonial Author",
+                    "name": "testimonial_author",
+                    "type": "text"
+                },
+                {
+                    "key": "field_test_image",
+                    "label": "Testimonial Image",
+                    "name": "testimonial_image",
+                    "type": "image",
+                    "return_format": "id",
+                    "preview_size": "medium"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/testimonial-feature"
+            }
+        ]
+    ],
+    "active": true
+}

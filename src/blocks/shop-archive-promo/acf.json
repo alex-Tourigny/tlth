@@ -1,0 +1,75 @@
+{
+    "key": "group_shop_archive_promo",
+    "title": "Boutique — Promo éducation (bas de page)",
+    "fields": [
+        {
+            "key": "field_sap_title",
+            "label": "Titre",
+            "name": "shop_archive_promo_title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text.",
+            "default_value": "Vous travaillez dans le milieu de l'éducation?"
+        },
+        {
+            "key": "field_sap_description",
+            "label": "Description",
+            "name": "shop_archive_promo_description",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "<p>Ton Livre Ton Histoire offre des rabais de groupe pour toutes les enseignantes et éducatrices qui souhaitent valoriser la lecture et l'imagination auprès des enfants.</p>"
+        },
+        {
+            "key": "field_sap_cta",
+            "label": "Bouton CTA",
+            "name": "shop_archive_promo_cta",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_sap_image",
+            "label": "Image",
+            "name": "shop_archive_promo_image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_sap_show_badge",
+            "label": "Afficher le badge",
+            "name": "shop_archive_promo_show_badge",
+            "type": "true_false",
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_sap_badge",
+            "label": "Image du badge",
+            "name": "shop_archive_promo_badge_image",
+            "type": "image",
+            "instructions": "Badge circulaire affiché au centre de la bannière (ex. rabais %).",
+            "return_format": "id",
+            "preview_size": "medium",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_sap_show_badge",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-boutique"
+            }
+        ]
+    ],
+    "active": true
+}

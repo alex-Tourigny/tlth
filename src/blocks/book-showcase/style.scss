@@ -1,0 +1,91 @@
+.book-showcase {
+	// Navigation arrows
+	.nav-arrows {
+		@apply flex justify-center gap-2;
+
+		.nav-arrow {
+			@apply p-2 rounded-full transition-all duration-300 cursor-pointer;
+			@apply border border-primary bg-transparent hover:border-2;
+			@apply w-10 h-10 flex items-center justify-center;
+
+			svg {
+				@apply w-4 h-6 -mr-1 transition-all duration-300;
+				
+				path {
+					@apply stroke-primary transition-all duration-300;
+					stroke-width: 3px;
+				}
+			}
+
+			&:hover svg{
+				@apply mr-0;
+				path {
+					stroke-width: 5px;
+				}
+			} 
+
+			&.next{
+				@apply bg-primary;
+				svg{
+					@apply -ml-1 mr-0;
+					path{
+						@apply stroke-white;
+					}
+				}
+
+				&:hover svg{
+					@apply ml-0;
+				}
+			}
+		}
+	}
+
+	// Books Grid (Slider)
+	.books-grid {
+		// Prevent FOUC: lay slides out in a row and only show the cards that
+		// would be visible once slick initializes, so off-screen cards can't
+		// trigger a horizontal scrollbar.
+		&:not(.slick-initialized) {
+			@apply flex overflow-hidden;
+
+			.book-card-wrapper {
+				@apply flex-shrink-0 w-full sm:w-1/2 lg:w-1/4;
+
+				// hide everything past the first slide by default (mobile: show 1)
+				&:nth-child(n + 2) {
+					@apply hidden;
+				}
+
+				// sm: show 2
+				&:nth-child(2) {
+					@apply sm:block;
+				}
+
+				// lg: show 4
+				&:nth-child(3),
+				&:nth-child(4) {
+					@apply lg:block;
+				}
+			}
+		}
+
+		// Ensure slick track aligns items correctly
+		.slick-track {
+			@apply flex items-stretch;
+		}
+		
+		.slick-slide {
+			@apply h-auto; // For equal height if using flex
+			
+			// Fix for focus ring
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+	
+	// Wrapper for spacing/shadows not to be cut off
+	.book-card-wrapper {
+		@apply h-full py-4; // Add vertical padding for hover effects
+	}
+}

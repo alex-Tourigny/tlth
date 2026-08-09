@@ -1,7 +1,7 @@
 <section class="workshop-slice workshop-landing">
 	<?
 	if( get_field('workshop-bg') ){
-		echo FW::get_image( get_field('workshop-bg'), '', 'bg' );
+		echo TLTH::get_image( get_field('workshop-bg'), '', 'bg' );
 	}
 	?>
 
@@ -18,7 +18,7 @@
 
 						<? if( get_field('character-2-img') ) { ?>
 							<div class="img">
-								<?= FW::get_image( get_field('character-2-img') ); ?>
+								<?= TLTH::get_image( get_field('character-2-img') ); ?>
 							</div>
 						<? } ?>
 					</div>
@@ -28,7 +28,7 @@
 					<div class="character character-1 with-dialog dialog-left dialog-size-normal">
 						<? if( get_field('character-1-img') ) { ?>
 							<div class="img">
-								<?= FW::get_image( get_field('character-1-img') ); ?>
+								<?= TLTH::get_image( get_field('character-1-img') ); ?>
 							</div>
 						<? } ?>
 

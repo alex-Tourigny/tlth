@@ -18,7 +18,7 @@ $top_content = isset($top_content) ? $top_content : get_sub_field('content');
 				<h4 data-aos="fade-right"><?= $top_sub_title; ?></h4>
 			<?php } ?>
 			<?php if( $top_title ) { ?>
-				<h2 data-aos="fade-right"><?= stylized_string_red( $top_title ); ?></h2>
+				<h2 data-aos="fade-right"><?= TLTH::stylized_string_red( $top_title ); ?></h2>
 			<?php } ?>
 			<?php if( $top_after_title ) { ?>
 				<h5 data-aos="fade-right"><?= $top_after_title; ?></h5>

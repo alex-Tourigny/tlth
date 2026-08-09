@@ -55,7 +55,7 @@ if( $slides ){ ?>
 		
 									<?php if( $btn ){ ?>
 										<div class="btn-spacing">
-											<?php echo FW::button( $btn, ['btn', 'red'] ); ?>
+											<?php echo TLTH::button( $btn, ['btn', 'red'] ); ?>
 										</div>
 									<? } ?>
 								</div>
@@ -63,7 +63,7 @@ if( $slides ){ ?>
 							<div class="col-12 col-md-6">
 								<div class="hero-featured-img">
 									<? if( $hightlight_img ){
-										echo FW::get_image( $hightlight_img, '', '' );
+										echo TLTH::get_image( $hightlight_img, '', '' );
 									} ?>
 								</div>
 							</div>

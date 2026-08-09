@@ -31,7 +31,7 @@ $confirmation_img = get_field("confirmation-img");
         <div class="row gutter-80">
             <div class="col-12 col-md-4 text-center">
                 <div class="img-container">
-					<?= FW::get_image($confirmation_img) ?>
+					<?= TLTH::get_image($confirmation_img) ?>
                 </div>
 
             </div>

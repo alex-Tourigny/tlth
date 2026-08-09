@@ -40,7 +40,7 @@ if ($isWinner) {
 
         <div class="prize-container">
             <div class="prize-img-container">
-                <?= FW::get_image(get_field("prize-img", $prize)) ?>
+                <?= TLTH::get_image(get_field("prize-img", $prize)) ?>
             </div>
 
             <div class="winner-text-container"><?= get_field("prize-winner-text", $prize) ?></div>
@@ -67,7 +67,7 @@ if ($isWinner) {
 
         <div class="prize-container">
             <div class="prize-img-container">
-                <?= FW::get_image(get_field("prize-img", $prize)) ?>
+                <?= TLTH::get_image(get_field("prize-img", $prize)) ?>
             </div>
 
             <div class="winner-text-container"><?= get_field("prize-winner-text", $prize) ?></div>

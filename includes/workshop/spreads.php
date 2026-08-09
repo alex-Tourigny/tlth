@@ -13,7 +13,7 @@ foreach($spreads as $key => $pages) { ?>
 			<a href="javascript:;" class="workshop-book-nav prev"></a>
 			<a href="javascript:;" class="workshop-book-nav next"></a>
 
-			<?
+			<?php
 			$image_sets = [];
 			foreach($pages as $page){ ?>
 				<div class="col-12 col-md-6">
@@ -24,7 +24,7 @@ foreach($spreads as $key => $pages) { ?>
 			<? } ?>
 		</div>
 
-		<?
+		<?php
 		// We'll shuffle the image set in JS for simplicity in markup buildup
 		if( ! $is_book_confirmation ) { ?>
 			<?php if( ! empty($image_sets) ){ ?>

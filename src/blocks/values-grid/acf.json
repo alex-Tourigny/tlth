@@ -1,0 +1,72 @@
+{
+    "key": "group_values_grid",
+    "title": "Values Grid Block",
+    "fields": [
+        {
+            "key": "field_vg_section_title",
+            "label": "Section Title",
+            "name": "section_title",
+            "type": "text",
+            "default_value": "Les valeurs qui guident nos /*créations*/",
+            "instructions": "Wrap text with /* */ to color it (e.g. /*créations*/)"
+        },
+        {
+            "key": "field_vg_values",
+            "label": "Values",
+            "name": "values",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Add Value",
+            "min": 1,
+            "sub_fields": [
+                {
+                    "key": "field_vg_image",
+                    "label": "Illustration",
+                    "name": "image",
+                    "type": "image",
+                    "return_format": "id",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_vg_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_vg_description",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 3
+                },
+                {
+                    "key": "field_vg_color",
+                    "label": "Pill Color",
+                    "name": "color",
+                    "type": "select",
+                    "choices": {
+                        "teal": "Teal",
+                        "coral": "Coral",
+                        "gold": "Gold",
+                        "light-blue": "Light Blue"
+                    },
+                    "default_value": "teal",
+                    "allow_null": 1,
+                    "return_format": "value",
+                    "instructions": "Leave empty to auto-cycle (teal, coral, gold)."
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/values-grid"
+            }
+        ]
+    ],
+    "active": true
+}

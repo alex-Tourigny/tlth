@@ -1,0 +1,130 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Ton livre ton histoire\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-06 02:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.4; wp-6.9.4; php-8.4.20\n"
+"X-Domain: tlth"
+
+#. Author of the theme
+msgid "Agence Kibur"
+msgstr ""
+
+#: src/blocks/personalization-steps/block.php:48
+msgid "Ajoutez trois étapes dans le bloc pour afficher ce module."
+msgstr ""
+
+#. Name of the template
+#: woocommerce/archive-product.php:2
+msgid "Boutique"
+msgstr ""
+
+#. Name of the template
+#: templates/promo-code.php:2
+msgid "Code promotionnel"
+msgstr ""
+
+#. Name of the template
+#: templates/form-confirmation.php:2
+msgid "Confirmation prix réclamé"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:68
+msgctxt "Modifier votre compte"
+msgid "Edit your account settings"
+msgstr ""
+
+#: inc/core/helpers.php:103
+msgid "envoyer"
+msgstr ""
+
+#. Name of the template
+#: templates/form-prize.php:2
+msgid "Formulaire prix gagné"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://tonlivretonhistoire.ca"
+msgstr ""
+
+#. Name of the template
+#: templates/jeu-de-noel.php:2
+msgid "Jeu de noël"
+msgstr ""
+
+#. Name of the template
+#: templates/workshop.php:2
+msgid "L'Atelier"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:60
+msgid "Manage your addresses"
+msgstr ""
+
+#: inc/setup/navigation.php:13
+msgid "Navigation footer"
+msgstr ""
+
+#: inc/setup/navigation.php:12
+msgid "Navigation primaire"
+msgstr ""
+
+#. Name of the template
+#: templates/page-sidebar.php:2
+msgid "Page avec barre latérale"
+msgstr ""
+
+#. Name of the template
+#: templates/page-content-rows.php:2
+msgid "Page avec rangées de contenu"
+msgstr ""
+
+#. Name of the template
+#: templates/page-noel.php:2
+msgid "Page de noël"
+msgstr ""
+
+#. Name of the template
+#: templates/page-mailpoet.php:2
+msgid "Page Mailpoet"
+msgstr ""
+
+#: src/blocks/personalization-steps/block.php:11
+msgid "Personnalise ton livre"
+msgstr ""
+
+#: src/blocks/team-slider/block.php:99
+msgid "Slide précédente"
+msgstr ""
+
+#: src/blocks/team-slider/block.php:102
+msgid "Slide suivante"
+msgstr ""
+
+#. Description of the theme
+msgid "Thème WordPress sur mesure TLTH"
+msgstr ""
+
+#. Name of the theme
+msgid "Ton livre ton histoire"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:52
+msgid "View your recent orders"
+msgstr ""
+
+#. Name of the template
+#: templates/ecole.php:2
+msgid "École / Garderie"
+msgstr ""

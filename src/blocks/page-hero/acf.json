@@ -1,0 +1,83 @@
+{
+    "key": "group_page_hero",
+    "title": "Page Hero Block",
+    "fields": [
+        {
+            "key": "field_page_hero_title",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text. E.g. Notre /*histoire*/"
+        },
+        {
+            "key": "field_ph_shape_set",
+            "label": "Decorative Shapes",
+            "name": "shape_set",
+            "type": "select",
+            "instructions": "Choose which set of decorative icons to display over the hero.",
+            "choices": {
+                "default": "Set A (Zero, Half-circle, Triple-half)",
+                "alt": "Set B (Triple-half, Half-circle, Zero)"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "allow_null": 0
+        },
+        {
+            "key": "field_page_hero_image",
+            "label": "Hero Image",
+            "name": "hero_image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_ph_intro_title",
+            "label": "Intro Title",
+            "name": "intro_title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text.",
+            "default_value": ""
+        },
+        {
+            "key": "field_ph_intro_desc",
+            "label": "Intro Description",
+            "name": "intro_description",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_ph_hero_cta",
+            "label": "Intro CTA Button",
+            "name": "hero_cta",
+            "type": "link",
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/page-hero"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/a-propos.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/ecole.php"
+            }
+        ]
+    ],
+    "active": true
+}

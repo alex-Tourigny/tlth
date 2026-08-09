@@ -1,0 +1,20 @@
+// Main SCSS entry point
+// Import Tailwind CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Import partials
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'components';
+@import 'header';
+@import 'footer';
+@import 'animations';
+@import 'utilities';
+@import 'gravity-forms';
+@import 'book-wizard';
+@import 'woocommerce';
+@import 'responsive';
+

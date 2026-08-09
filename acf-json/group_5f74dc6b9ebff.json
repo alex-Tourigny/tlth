@@ -6,6 +6,7 @@
             "key": "field_5f75f87f9555a",
             "label": "Notice de la boutique",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -16,12 +17,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5f7b7ae5a502e",
             "label": "Activer la notice?",
             "name": "shop-notice-activated",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -41,6 +44,7 @@
             "key": "field_5fd27bcd7a5e9",
             "label": "Notice de la boutique",
             "name": "shop-notice-row",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -62,12 +66,14 @@
             "min": 0,
             "max": 0,
             "layout": "row",
-            "button_label": "",
+            "button_label": "Ajouter un élément",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_600ad7b3d5d75",
                     "label": "Contenu en français",
                     "name": "",
+                    "aria-label": "",
                     "type": "tab",
                     "instructions": "",
                     "required": 0,
@@ -78,12 +84,15 @@
                         "id": ""
                     },
                     "placement": "top",
-                    "endpoint": 0
+                    "endpoint": 0,
+                    "selected": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_5fd27be07a5ea",
                     "label": "Date de début (FR)",
                     "name": "shop-notice-date-start-fr",
+                    "aria-label": "",
                     "type": "date_picker",
                     "instructions": "",
                     "required": 0,
@@ -95,12 +104,15 @@
                     },
                     "display_format": "j F Y",
                     "return_format": "U",
-                    "first_day": 1
+                    "first_day": 1,
+                    "default_to_current_date": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_5fd27c0d7a5eb",
                     "label": "Date de fin (FR)",
                     "name": "shop-notice-date-end-fr",
+                    "aria-label": "",
                     "type": "date_picker",
                     "instructions": "",
                     "required": 0,
@@ -112,12 +124,15 @@
                     },
                     "display_format": "j F Y",
                     "return_format": "U",
-                    "first_day": 1
+                    "first_day": 1,
+                    "default_to_current_date": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_5fd27c207a5ec",
                     "label": "Contenu (FR)",
                     "name": "shop-notice-content-fr",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -131,12 +146,14 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 1,
-                    "delay": 0
+                    "delay": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_5fd27c2d7a5ed",
                     "label": "Lien (FR)",
                     "name": "shop-notice-link-fr",
+                    "aria-label": "",
                     "type": "page_link",
                     "instructions": "",
                     "required": 0,
@@ -150,12 +167,14 @@
                     "taxonomy": "",
                     "allow_null": 0,
                     "allow_archives": 1,
-                    "multiple": 0
+                    "multiple": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_5fd28155b407b",
                     "label": "Couleur de fond (FR)",
                     "name": "bg-color-fr",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "rouge : #FB414D\r\nturquoise : #00ABC0\r\nmauve : #7940B1\r\njaune : #FFC048",
                     "required": 0,
@@ -167,12 +186,17 @@
                     },
                     "default_value": "",
                     "enable_opacity": false,
-                    "return_format": "string"
+                    "return_format": "string",
+                    "custom_palette_source": "",
+                    "palette_colors": "",
+                    "show_color_wheel": true,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_5fd28221b407c",
                     "label": "Couleur du texte (FR)",
                     "name": "text-color-fr",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "blanc : #FFFFFF\r\nbleu foncé : #032D40",
                     "required": 0,
@@ -184,12 +208,17 @@
                     },
                     "default_value": "",
                     "enable_opacity": false,
-                    "return_format": "string"
+                    "return_format": "string",
+                    "custom_palette_source": "",
+                    "palette_colors": "",
+                    "show_color_wheel": true,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_600ad7d7d5d76",
                     "label": "Contenu en anglais",
                     "name": "",
+                    "aria-label": "",
                     "type": "tab",
                     "instructions": "",
                     "required": 0,
@@ -200,12 +229,15 @@
                         "id": ""
                     },
                     "placement": "top",
-                    "endpoint": 0
+                    "endpoint": 0,
+                    "selected": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_600ad819d5d77",
                     "label": "Date de début (EN)",
                     "name": "shop-notice-date-start-en",
+                    "aria-label": "",
                     "type": "date_picker",
                     "instructions": "",
                     "required": 0,
@@ -217,12 +249,15 @@
                     },
                     "display_format": "j F Y",
                     "return_format": "U",
-                    "first_day": 1
+                    "first_day": 1,
+                    "default_to_current_date": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_600ad822d5d78",
                     "label": "Date de fin (EN)",
                     "name": "shop-notice-date-end-en",
+                    "aria-label": "",
                     "type": "date_picker",
                     "instructions": "",
                     "required": 0,
@@ -234,12 +269,15 @@
                     },
                     "display_format": "j F Y",
                     "return_format": "U",
-                    "first_day": 1
+                    "first_day": 1,
+                    "default_to_current_date": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_600ad829d5d79",
                     "label": "Contenu (EN)",
                     "name": "shop-notice-content-en",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -253,12 +291,14 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 1,
-                    "delay": 0
+                    "delay": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_600ad82fd5d7a",
                     "label": "Lien (EN)",
                     "name": "shop-notice-link-en",
+                    "aria-label": "",
                     "type": "page_link",
                     "instructions": "",
                     "required": 0,
@@ -272,12 +312,14 @@
                     "taxonomy": "",
                     "allow_null": 0,
                     "allow_archives": 1,
-                    "multiple": 0
+                    "multiple": 0,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_600ad834d5d7b",
                     "label": "Couleur de fond (EN)",
                     "name": "bg-color-en",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "rouge : #FB414D\r\nturquoise : #00ABC0\r\nmauve : #7940B1\r\njaune : #FFC048",
                     "required": 0,
@@ -289,12 +331,17 @@
                     },
                     "default_value": "",
                     "enable_opacity": false,
-                    "return_format": "string"
+                    "return_format": "string",
+                    "custom_palette_source": "",
+                    "palette_colors": "",
+                    "show_color_wheel": true,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 },
                 {
                     "key": "field_600ad83dd5d7c",
                     "label": "Couleur du texte (EN)",
                     "name": "text-color-en",
+                    "aria-label": "",
                     "type": "color_picker",
                     "instructions": "blanc : #FFFFFF\r\nbleu foncé : #032D40",
                     "required": 0,
@@ -306,7 +353,11 @@
                     },
                     "default_value": "",
                     "enable_opacity": false,
-                    "return_format": "string"
+                    "return_format": "string",
+                    "custom_palette_source": "",
+                    "palette_colors": "",
+                    "show_color_wheel": true,
+                    "parent_repeater": "field_5fd27bcd7a5e9"
                 }
             ]
         },
@@ -314,6 +365,7 @@
             "key": "field_5f74dc73ae11b",
             "label": "Réseaux sociaux",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -324,12 +376,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5f74dc8dae11c",
             "label": "Instagram",
             "name": "instagram",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -346,6 +400,7 @@
             "key": "field_5f74dca5ae11e",
             "label": "Facebook",
             "name": "facebook",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -362,6 +417,7 @@
             "key": "field_5f74dcabae11f",
             "label": "Pinterest",
             "name": "pinterest",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -378,6 +434,7 @@
             "key": "field_5fb2927dad56d",
             "label": "Footer",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -388,13 +445,15 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
-            "key": "field_600705439be99",
-            "label": "Rangée de bouton (FR)",
-            "name": "button-row-fr",
-            "type": "repeater",
+            "key": "field_61ae144f00071",
+            "label": "Infolettre (FR)",
+            "name": "newsletter_text_wysi-fr",
+            "aria-label": "",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -403,58 +462,20 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_6007055b9be9a",
-                    "label": "Bouton (FR)",
-                    "name": "btn-fr",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": ""
-                },
-                {
-                    "key": "field_600705659be9b",
-                    "label": "Couleur de texte (FR)",
-                    "name": "btn-color-fr",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "red": "Rouge",
-                        "blue": "Bleu"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "default_value": "",
-                    "layout": "",
-                    "return_format": "",
-                    "save_other_choice": 0
-                }
-            ]
+            "default_value": "",
+            "translations": "copy_once",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_600ad5882efc4",
-            "label": "Rangée de bouton (EN)",
-            "name": "button-row-en",
-            "type": "repeater",
+            "key": "field_696a98b6fb222",
+            "label": "Infolettre (EN)",
+            "name": "newsletter_text_wysi-en",
+            "aria-label": "",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -463,58 +484,20 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_600ad5882efc5",
-                    "label": "Bouton (EN)",
-                    "name": "btn-en",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_600ad5882efc6",
-                    "label": "Couleur de texte (EN)",
-                    "name": "btn-color-en",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "red": "Rouge",
-                        "blue": "Bleu"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "default_value": "",
-                    "layout": "vertical",
-                    "return_format": "value",
-                    "save_other_choice": 0
-                }
-            ]
+            "default_value": "",
+            "translations": "copy_once",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
-            "key": "field_5fb29286ad56e",
-            "label": "Image de fond",
-            "name": "bg-img",
-            "type": "image",
+            "key": "field_696a9890fb221",
+            "label": "Formulaire infolettre",
+            "name": "newsletter_form",
+            "aria-label": "",
+            "type": "forms",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -523,21 +506,17 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "return_format": "post_object",
+            "allow_null": 0,
+            "multiple": 0,
+            "translations": "copy_once",
+            "allow_in_bindings": 0
         },
         {
             "key": "field_5fd12d6e00dd8",
             "label": "Pastille d'infolettre",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -548,12 +527,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5fd12d7c00dd9",
             "label": "Image de pastille (FR)",
             "name": "news-img-fr",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -578,6 +559,7 @@
             "key": "field_600ada6aee63a",
             "label": "Image de pastille (EN)",
             "name": "news-img-en",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -602,6 +584,7 @@
             "key": "field_5fda1f60c3afc",
             "label": "Image intérieure du formulaire (FR)",
             "name": "form-inner-img-fr",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -626,6 +609,7 @@
             "key": "field_600ada7cee63b",
             "label": "Image intérieure du formulaire (EN)",
             "name": "form-inner-img-en",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -650,6 +634,7 @@
             "key": "field_635bd18dbaa2d",
             "label": "Type de lien",
             "name": "link-type",
+            "aria-label": "",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -675,6 +660,7 @@
             "key": "field_635bd1bcbaa2e",
             "label": "Lien vers le formulaire (FR)",
             "name": "form-link-fr",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -699,6 +685,7 @@
             "key": "field_635bd1e2baa2f",
             "label": "Lien vers le formulaire (EN)",
             "name": "form-link-en",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -723,6 +710,7 @@
             "key": "field_5fd12db800dda",
             "label": "ID du formulaire (FR)",
             "name": "form-id-fr",
+            "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -753,6 +741,7 @@
             "key": "field_600ada91ee63c",
             "label": "ID du formulaire (EN)",
             "name": "form-id-en",
+            "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -780,66 +769,10 @@
             "translations": "copy_once"
         },
         {
-            "key": "field_61ae133fc5281",
-            "label": "Entête",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_61ae134bc5282",
-            "label": "Logo de partenaire",
-            "name": "partner-logo",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "translations": "copy_once"
-        },
-        {
-            "key": "field_61ae144f00071",
-            "label": "Lien",
-            "name": "partner-link",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "translations": "copy_once"
-        },
-        {
             "key": "field_652d4d9b44847",
             "label": "Entête - Jeu de noël",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -850,12 +783,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_652d4dc144848",
             "label": "Logo",
             "name": "logo",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -881,6 +816,7 @@
             "key": "field_652d52dbcf3c9",
             "label": "Image de gauche",
             "name": "header-img-left",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -906,6 +842,7 @@
             "key": "field_652d52e7cf3ca",
             "label": "Image de droite",
             "name": "header-img-right",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -931,6 +868,7 @@
             "key": "field_652d5321cf3cd",
             "label": "Petit titre (FR)",
             "name": "header-small-title-fr",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -951,6 +889,7 @@
             "key": "field_652d5339cf3ce",
             "label": "Gros titre (FR)",
             "name": "header-big-title-fr",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -971,6 +910,7 @@
             "key": "field_652d534ccf3cf",
             "label": "Texte (FR)",
             "name": "header-text-fr",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -991,6 +931,7 @@
             "key": "field_652d5364cf3d0",
             "label": "Bouton (FR)",
             "name": "header-btn-fr",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -1007,6 +948,7 @@
             "key": "field_652d9b6228785",
             "label": "Prix de consolation (FR)",
             "name": "participation-prize-fr",
+            "aria-label": "",
             "type": "post_object",
             "instructions": "",
             "required": 0,
@@ -1024,12 +966,14 @@
             "multiple": 0,
             "return_format": "object",
             "translations": "copy_once",
-            "ui": 1
+            "ui": 1,
+            "bidirectional_target": []
         },
         {
             "key": "field_652d5305cf3cb",
             "label": "Footer - Jeu de noël",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -1040,12 +984,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_652d55562a49b",
             "label": "Disclaimer (FR)",
             "name": "footer-disclaimer-fr",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -1066,6 +1012,7 @@
             "key": "field_652d9ffc16a6b",
             "label": "Courriel - Jeu de noël",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -1076,12 +1023,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_652da00f16a6c",
             "label": "Message gagnant - Jeu de noël",
             "name": "christmas-game-winner-email-fr",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -1102,6 +1051,7 @@
             "key": "field_653000ec65bfa",
             "label": "Message gagnant - 2 codes promos - Jeu de noël",
             "name": "christmas-game-winner-2-promo-codes-email-fr",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -1122,6 +1072,7 @@
             "key": "field_652ee3a3e736a",
             "label": "Message participation- Jeu de noël",
             "name": "christmas-game-participation-email-fr",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -1136,6 +1087,100 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0,
+            "translations": "translate"
+        },
+        {
+            "key": "field_tlth_404_tab",
+            "label": "404",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_tlth_404_content_fr",
+            "label": "Contenu (FR)",
+            "name": "404-content-fr",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "translations": "translate"
+        },
+        {
+            "key": "field_tlth_404_link_fr",
+            "label": "Lien (FR)",
+            "name": "404-link-fr",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "translations": "translate"
+        },
+        {
+            "key": "field_tlth_404_content_en",
+            "label": "Contenu (EN)",
+            "name": "404-content-en",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "translations": "translate"
+        },
+        {
+            "key": "field_tlth_404_link_en",
+            "label": "Lien (EN)",
+            "name": "404-link-en",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
             "translations": "translate"
         }
     ],
@@ -1156,5 +1201,9 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1697644828
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1784369550
 }

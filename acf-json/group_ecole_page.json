@@ -1,0 +1,70 @@
+{
+    "key": "group_ecole_page",
+    "title": "Page: École / Garderie — Fields",
+    "fields": [
+        {
+            "key": "field_ecole_hero_title",
+            "label": "Hero: Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text.",
+            "default_value": "/*Éducation*/"
+        },
+        {
+            "key": "field_ecole_hero_subtitle",
+            "label": "Hero: Subtitle",
+            "name": "subtitle",
+            "type": "text"
+        },
+        {
+            "key": "field_ecole_hero_image",
+            "label": "Hero: Image",
+            "name": "hero_image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_ecole_promo_title",
+            "label": "Code Promo: Title",
+            "name": "promo_code_title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text.",
+            "default_value": "Demandez votre /*code promotionnel*/"
+        },
+        {
+            "key": "field_ecole_promo_desc",
+            "label": "Code Promo: Description",
+            "name": "promo_code_description",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_ecole_promo_image",
+            "label": "Code Promo: Image",
+            "name": "promo_code_image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_ecole_promo_cta",
+            "label": "Code Promo: CTA Link",
+            "name": "promo_code_cta",
+            "type": "link",
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/ecole.php"
+            }
+        ]
+    ],
+    "active": true
+}

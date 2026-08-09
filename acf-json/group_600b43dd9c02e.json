@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_600b441337536",
-            "label": "Catégories de produits à masquer de la boutique",
+            "label": "Catégories de produits à afficher en dernier dans la boutique",
             "name": "shop-product-categories-to-hide",
             "type": "taxonomy",
             "instructions": "",

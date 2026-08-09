@@ -1,0 +1,201 @@
+/* Gravity Forms Styles */
+
+@layer components {
+    .gform_wrapper.gravity-theme{
+        .gform_heading{
+            .gform_required_legend{
+                @apply hidden;
+            }
+        }
+
+        form .gform-body {
+            @apply font-primary;
+
+            .gform_fields{
+                @apply grid grid-cols-1 md:grid-cols-2;
+                row-gap: 0.25rem;
+                column-gap: 0.25rem;
+
+                .gfield{
+                    @apply md:col-span-2;
+
+                    .ginput_container{
+                        @apply space-y-1;
+                    }
+                }
+
+                .gfield--width-half{
+                    @apply md:col-span-1;
+                }
+            }
+    
+            form {
+                @apply space-y-5;
+            }
+
+            .gfield_required {
+                @apply text-dark-blue;
+            }
+    
+            .gfield_label {
+                @apply text-dark-blue text-sm font-normal leading-normal;
+                @apply font-primary;
+                @apply gap-px;
+                @apply mb-0;
+            }
+    
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="number"],
+            input[type="url"],
+            input[type="date"],
+            input[type="time"] {
+                @apply w-full bg-transparent border border-primary text-primary text-sm;
+                @apply px-4 py-1.5 rounded-2xl;
+                @apply font-primary font-normal;
+                @apply focus:outline-none focus:ring-0 focus:border-primary;
+                @apply transition-colors duration-200;
+    
+                &::placeholder {
+                    @apply text-[#CACDCE];
+                }
+            }
+    
+            textarea { 
+                @apply w-full bg-transparent border border-primary text-primary text-sm !rounded-2xl;
+                @apply px-4 py-1.5;
+                @apply font-primary font-normal;
+                @apply focus:outline-none focus:ring-0 focus:border-primary;
+                @apply transition-colors duration-200;
+                @apply resize-y;
+    
+                &::placeholder {
+                    @apply text-[#CACDCE];
+                }
+
+                &.medium{
+                    @apply h-[125px];
+                }
+
+            }
+    
+            select {
+                @apply w-full bg-transparent border border-primary text-primary text-sm rounded-2xl;
+                @apply px-4 py-1.5;
+                @apply font-primary font-normal;
+                @apply transition-colors duration-200;
+                @apply appearance-none;
+                @apply focus:outline-none focus:ring-0 focus:border-primary;
+                @apply cursor-pointer;
+    
+                background-image: url('../../assets/images/icons/chev-down.svg');
+                background-position: right 0.75rem center;
+                background-repeat: no-repeat;
+                background-size: 1rem;
+                padding-right: 2.5rem;
+
+                @media screen and (max-width: 641px) {
+                    min-height: 42px;
+                }
+            }
+    
+            select[multiple] {
+                @apply min-h-[100px];
+                background-image: none;
+                padding-right: 1rem;
+            }
+    
+            .gfield_checkbox,
+            .gfield_radio {
+    
+                label {
+                    @apply text-primary text-sm font-normal;
+                    @apply font-primary;
+                    @apply flex items-center gap-2;
+                    @apply cursor-pointer;
+                }
+    
+                input[type="checkbox"],
+                input[type="radio"] {
+                    @apply w-4 h-4;
+                    @apply border-primary bg-transparent;
+                    @apply text-white;
+                    @apply cursor-pointer;
+                    @apply focus:outline-none focus:ring-0;
+    
+                    &:checked {
+                        @apply bg-white border-white;
+                    }
+                }
+            }
+    
+            .gfield_description {
+                @apply text-sm text-[#CACDCE];
+                @apply font-primary font-normal;
+                @apply mt-1;
+            }
+    
+            .validation_message {
+                @apply text-sm text-primary;
+                @apply font-primary font-normal;
+                @apply mt-1;
+            }
+    
+            .gfield_error {
+                input,
+                textarea,
+                select,
+                .chosen-container {
+                    @apply border-red;
+                }
+                .validation_message {
+                    @apply text-red bg-transparent border-none pb-0;
+                }
+            }
+    
+            .gform_confirmation_message {
+                @apply text-white text-sm;
+                @apply font-primary;
+                @apply p-4 bg-green bg-opacity-20 border border-green;
+            }
+    
+            .gform_validation_error {
+                @apply text-primary text-sm;
+                @apply font-primary;
+                @apply p-4 bg-primary bg-opacity-20 border border-primary;
+                @apply mb-4;
+            }
+    
+            .gform_hidden {
+                @apply hidden;
+            }
+    
+            .ginput_complex {
+                @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+            }
+    
+            .gfield_list {    
+                .gfield_list_header {
+                    @apply text-primary text-sm font-medium;
+                    @apply font-primary;
+                }
+    
+                .gfield_list_group_item {
+                    @apply flex gap-2 items-end;
+                }
+            }
+        }
+
+        .gform_footer {
+            @apply mt-2;
+        }
+    }
+    .gform_confirmation_wrapper{
+        .gform_confirmation_message{
+            font-size: 1.7rem;
+            text-align: center;
+        }
+    }
+}
+

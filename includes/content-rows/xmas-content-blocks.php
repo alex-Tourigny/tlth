@@ -71,7 +71,7 @@ $minutes_remaining = floor(($remaining % 3600) / 60);
 
 						<?php if( $img ){ ?>
 							<div class="image">
-								<?= FW::get_image( $img, '', 'img' ) ?>
+								<?= TLTH::get_image( $img, '', 'img' ) ?>
 							</div>
 						<?php } ?>
 
@@ -100,7 +100,7 @@ $minutes_remaining = floor(($remaining % 3600) / 60);
 <?php if( get_sub_field("btn") ){ ?>
 	<div class="slice-outro padding-both">
 		<div class="wrapper big">
-			<?= FW::button( get_sub_field("btn"), ['btn', 'red']) ?>
+			<?= TLTH::button( get_sub_field("btn"), ['btn', 'red']) ?>
 		</div>
 	</div>
 <?php } ?>

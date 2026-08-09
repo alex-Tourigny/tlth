@@ -21,7 +21,7 @@
 
 					<?php if( get_sub_field('btn') ){ ?>
 						<div class="btn-spacing">
-							<?php echo FW::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
+							<?php echo TLTH::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
 						</div>
 					<? } ?>
 				</div>
@@ -31,7 +31,7 @@
 					<div class="promo-block" style="background-color:<?= get_sub_field('bg-color'); ?>">
 
 						<? if( get_sub_field('bg-img') ){
-							echo FW::get_image( get_sub_field('bg-img') );
+							echo TLTH::get_image( get_sub_field('bg-img') );
 						} ?>
 
 					<? if( have_rows('promo-block') ){ ?>

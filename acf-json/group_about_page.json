@@ -1,0 +1,101 @@
+{
+    "key": "group_about_page",
+    "title": "Page: À propos — Fields",
+    "fields": [
+        {
+            "key": "field_about_hero_title",
+            "label": "Hero: Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text. E.g. Notre /*histoire*/",
+            "default_value": "Notre /*histoire*/"
+        },
+        {
+            "key": "field_about_hero_subtitle",
+            "label": "Hero: Subtitle",
+            "name": "subtitle",
+            "type": "text"
+        },
+        {
+            "key": "field_about_hero_image",
+            "label": "Hero: Image",
+            "name": "hero_image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_about_intro_title",
+            "label": "Intro Split: Title",
+            "name": "intro_title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text."
+        },
+        {
+            "key": "field_about_intro_desc",
+            "label": "Intro Split: Description",
+            "name": "intro_description",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_about_intro_image",
+            "label": "Intro Split: Image",
+            "name": "intro_image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_about_intro_cta",
+            "label": "Intro Split: CTA Link",
+            "name": "intro_cta",
+            "type": "link",
+            "return_format": "array"
+        },
+        {
+            "key": "field_about_confiance_title",
+            "label": "Curiosité/Confiance: Title",
+            "name": "confiance_title",
+            "type": "text",
+            "instructions": "Use /* */ to colorize text.",
+            "default_value": "De la curiosité à la /*confiance en soi*/"
+        },
+        {
+            "key": "field_about_confiance_desc",
+            "label": "Curiosité/Confiance: Description",
+            "name": "confiance_description",
+            "type": "wysiwyg",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0
+        },
+        {
+            "key": "field_about_confiance_image",
+            "label": "Curiosité/Confiance: Image",
+            "name": "confiance_image",
+            "type": "image",
+            "return_format": "id",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_about_confiance_cta",
+            "label": "Curiosité/Confiance: CTA Link",
+            "name": "confiance_cta",
+            "type": "link",
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates/a-propos.php"
+            }
+        ]
+    ],
+    "active": true
+}

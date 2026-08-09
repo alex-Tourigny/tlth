@@ -51,7 +51,7 @@ get_header();  ?>
 
 				<?php if( get_field('promo-code-button') ){ ?>
                     <div class="button-container">
-						<?= FW::button( get_field('promo-code-button'), ['btn', 'red'] ); ?>
+						<?= TLTH::button( get_field('promo-code-button'), ['btn', 'red'] ); ?>
                     </div>
 				<?php } ?>
 

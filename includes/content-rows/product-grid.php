@@ -35,12 +35,12 @@ if( ! empty($product_list) ){ ?>
 							<div class="product-block">
 
 								<a href="<?= get_permalink(); ?>">
-									<? if( FW::featured_image() ){ echo FW::featured_image(); } ?>
+									<? if( TLTH::featured_image() ){ echo TLTH::featured_image(); } ?>
 								</a>
 
 								<h2 data-mh="product-title"><?= get_the_title(); ?></h2>
 
-								<?= get_product_categories_badges(); ?>
+								<?php TLTH::get_product_categories_badges(); ?>
 
 								<div class="product-btn btn-spacing">
 									<a href="<?= get_permalink(); ?>" class="btn purple small"><?= pll__("En savoir plus"); ?></a>

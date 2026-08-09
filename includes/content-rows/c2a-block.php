@@ -11,7 +11,7 @@ if( get_sub_field('img-side') == 'right' ){
 <div class="wrapper">
 	<div class="c2a-section-block">
 
-		<? if( get_sub_field('bg-img') ){ echo FW::get_image( get_sub_field('bg-img') ); } ?>
+		<? if( get_sub_field('bg-img') ){ echo TLTH::get_image( get_sub_field('bg-img') ); } ?>
 
 		<? if( get_sub_field('overlay-color') ){ ?>
 			<div class="overlay" style="background-color: <?= get_sub_field('overlay-color'); ?>; <?= get_sub_field('overlay-opacity') ? 'opacity: ' . get_sub_field('overlay-opacity') . ';' : ''; ?>"></div>
@@ -23,7 +23,7 @@ if( get_sub_field('img-side') == 'right' ){
 					<div class="c2a-feature-img">
 						<?
 						if( get_sub_field('featured-img') ){
-							echo FW::get_image( get_sub_field('featured-img') );
+							echo TLTH::get_image( get_sub_field('featured-img') );
 						}
 						?>
 					</div>
@@ -37,7 +37,7 @@ if( get_sub_field('img-side') == 'right' ){
 
 						<? if( get_sub_field('btn') ){ ?>
 						<div class="btn-spacing">
-							<?php echo FW::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
+							<?php echo TLTH::button( get_sub_field('btn'), ['btn', 'red'] ); ?>
 						</div>
 						<? } ?>
 					</div>

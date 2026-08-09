@@ -1,0 +1,43 @@
+{
+    "key": "group_body_shapes_position",
+    "title": "Formes d\u2019arri\u00e8re-plan",
+    "fields": [
+        {
+            "key": "field_body_shapes_switched",
+            "label": "Inverser les formes",
+            "name": "body_shapes_switched",
+            "type": "true_false",
+            "instructions": "Inverser la position des formes d\u2019arri\u00e8re-plan (haut-droite \/ bas-gauche au lieu de haut-gauche \/ bas-droite).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1745618000
+}
