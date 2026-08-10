@@ -235,12 +235,28 @@ function tlth_book_wizard_gform_args( $args, $form_id = null ) {
 		return $args;
 	}
 
-	$args['ajax'] = true;
+	if ( tlth_product_has_book_personalization_wizard( $product ) ) {
+		// Variable-product book wizard: paged, JS-driven AJAX submission.
+		$args['ajax'] = true;
 
-	if ( class_exists( 'GFFormDisplay' ) ) {
-		$args['submission_method'] = defined( 'GFFormDisplay::SUBMISSION_METHOD_AJAX' )
-			? GFFormDisplay::SUBMISSION_METHOD_AJAX
-			: 'ajax';
+		if ( class_exists( 'GFFormDisplay' ) ) {
+			$args['submission_method'] = defined( 'GFFormDisplay::SUBMISSION_METHOD_AJAX' )
+				? GFFormDisplay::SUBMISSION_METHOD_AJAX
+				: 'ajax';
+		}
+
+		return $args;
+	}
+
+	// Simple products with a linked form (e.g. diplôme): WooCommerce's own
+	// add-to-cart button submits the cart form via a normal POST. Force Gravity
+	// Forms' standard postback submission so its 2.9 AJAX submission handler stays
+	// dormant — otherwise GF logs "Unsupported submission flow detected" because it
+	// cannot recognize WooCommerce's (non-GF) submit button.
+	$args['ajax'] = false;
+
+	if ( class_exists( 'GFFormDisplay' ) && defined( 'GFFormDisplay::SUBMISSION_METHOD_POSTBACK' ) ) {
+		$args['submission_method'] = GFFormDisplay::SUBMISSION_METHOD_POSTBACK;
 	}
 
 	return $args;
@@ -268,10 +284,24 @@ function tlth_book_wizard_gform_pre_render( $form ) {
 		return $form;
 	}
 
-	$form['ajax'] = true;
+	if ( tlth_product_has_book_personalization_wizard( $product ) ) {
+		// Variable-product book wizard: paged, JS-driven AJAX submission.
+		$form['ajax'] = true;
 
-	if ( class_exists( 'GFFormDisplay' ) && defined( 'GFFormDisplay::SUBMISSION_METHOD_AJAX' ) ) {
-		$form['submission_method'] = GFFormDisplay::SUBMISSION_METHOD_AJAX;
+		if ( class_exists( 'GFFormDisplay' ) && defined( 'GFFormDisplay::SUBMISSION_METHOD_AJAX' ) ) {
+			$form['submission_method'] = GFFormDisplay::SUBMISSION_METHOD_AJAX;
+		}
+
+		return $form;
+	}
+
+	// Simple products with a linked form (e.g. diplôme): keep Gravity Forms' 2.9
+	// AJAX submission handler dormant so it does not log "Unsupported submission
+	// flow detected" — WooCommerce's add-to-cart button submits via normal POST.
+	$form['ajax'] = false;
+
+	if ( class_exists( 'GFFormDisplay' ) && defined( 'GFFormDisplay::SUBMISSION_METHOD_POSTBACK' ) ) {
+		$form['submission_method'] = GFFormDisplay::SUBMISSION_METHOD_POSTBACK;
 	}
 
 	return $form;
@@ -293,6 +323,14 @@ function tlth_book_wizard_gform_submit_button( $button, $form ) {
 
 	global $product;
 	if ( ! $product instanceof WC_Product ) {
+		return $button;
+	}
+
+	// Only rebrand the submit button on the variable-product book wizard, whose JS
+	// wires window.gform.submission.handleButtonClick(). Simple products with a
+	// linked form (e.g. diplôme) keep Gravity Forms' native button so its default
+	// submission flow stays intact (no "Unsupported submission flow" warning).
+	if ( ! tlth_product_has_book_personalization_wizard( $product ) ) {
 		return $button;
 	}
 
